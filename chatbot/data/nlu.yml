@@ -1,0 +1,133 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_vpby_benefits
+  examples: |
+    - What are the benefits of VPBY?
+    - Tell me about the benefits of Varishtha Pension Bima Yojana
+    - What advantages does VPBY offer?
+
+- intent: ask_vpby_how_it_works
+  examples: |
+    - How does VPBY work?
+    - Explain how Varishtha Pension Bima Yojana works
+    - What is the working process of VPBY?
+
+- intent: ask_vpby_pension_amount
+  examples: |
+    - What is the minimum pension amount under VPBY?
+    - What is the maximum pension amount under Varishtha Pension Bima Yojana?
+    - How much pension can I get from VPBY?
+
+- intent: ask_vpby_tax_benefits
+  examples: |
+    - What are the tax benefits of git?
+    - Does Varishtha Pension Bima Yojana offer tax benefits?
+    - Can I get tax deductions for investing in VPBY?
+
+- intent: ask_ppf_benefits
+  examples: |
+    - What are the benefits of PPF?
+    - Tell me about the benefits of Public Provident Fund
+    - What advantages does PPF offer?
+
+- intent: ask_ppf_min_investment
+  examples: |
+    - What is the minimum investment amount in PPF?
+    - How much do I need to invest in PPF at minimum?
+    - What is the least amount I can invest in Public Provident Fund?
+
+- intent: ask_ppf_max_investment
+  examples: |
+    - What is the maximum investment amount in PPF?
+    - How much can I invest in PPF at maximum?
+    - What is the highest amount I can invest in Public Provident Fund?

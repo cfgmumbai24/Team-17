@@ -1,2 +1,5 @@
 */.env
 */node_modules
+
+# Rasa stuff
+chatbot/.rasa
