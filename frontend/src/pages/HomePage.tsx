@@ -22,69 +22,48 @@ import {
   AcademicCapIcon,
 } from "@heroicons/react/24/outline";
 
+import './HomePage.css';
+import Banner_img from '../components/Assests/BannerImage.png';
+
 export default function Home() {
   return (
-    <>
-      <div>
-        <Carousel>
-          <CarouselContent>
-            <CarouselItem className="basis-0/3 px-2">
-              <Card className="w-80 h-96 p-4 border border-gray-300 rounded-lg shadow-md">
-                <CardHeader>
-                  <CardTitle className="flex items-center">
-                    <AcademicCapIcon className="h-6 w-6 mr-2" />
-                    AI-TEACHER
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600 mt-2">
-                    AI-TEACHER is a virtual voice assistant designed to help
-                    students and teachers outside of school hours. It provides
-                    personalized learning experiences and educational resources
-                    tailored to individual needs.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-            <CarouselItem className="basis-0/3 px-2">
-              <Card className="w-80 h-96 p-4 border border-gray-300 rounded-lg shadow-md">
-                <CardHeader>
-                  <CardTitle className="flex items-center">
-                    <UserGroupIcon className="h-6 w-6 mr-2" />
-                    COMICSTAAN
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600 mt-2">
-                    COMICSTAAN is an AI-powered tool that generates comics to
-                    make learning fun and engaging. It creates visually
-                    appealing comic strips based on educational content, making
-                    complex concepts easy to understand.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-            <CarouselItem className="basis-0/3 px-2">
-              <Card className="w-80 h-96 p-4 border border-gray-300 rounded-lg shadow-md">
-                <CardHeader>
-                  <CardTitle className="flex items-center">
-                    <DocumentIcon className="h-6 w-6 mr-2" />
-                    TESTIFY
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600 mt-2">
-                    Testify is a platform that creates personalized test series
-                    on any topic. It helps students practice and assess their
-                    knowledge, offering insights and feedback to improve
-                    learning outcomes.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          </CarouselContent>
-        </Carousel>
+    <div>
+      <div className='home'>
+      <div className="banner">
+        <img src={Banner_img} alt="Banner" />
+        <div className="banner-text">
+          <h1>Hi, don’t walk into tomorrow without financial knowledge</h1>
+          <p>Start learning about personal finance, today! Pick a topic of your interest from below.</p>
+          <div className="stats">
+            <div className="stat">
+              <i className="fas fa-users"></i>
+              <button>117 Total Users</button>
+            </div>
+            <div className="stat">
+              <i className="fas fa-book"></i>
+              <button>139 Guides</button>
+            </div>
+            <div className="stat">
+              <i className="fas fa-video"></i>
+              <button>14 Informational Videos</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </>
+      <div className='get-started-container'>
+      <div className="help-section">
+        <h1>Get Started With</h1>
+        <div className="help-tags">
+            <button className="action-button"> Learn With Us</button>
+            <button className="action-button"> Get Help</button>        
+            </div>
+      </div>
+      </div>
+
+      
+
+     
+    </div>
+    </div>
   );
 }
