@@ -8,6 +8,7 @@ import SignInPage from "./pages/SignIn";
 import ProfilePage from "./pages/ProfilePage";
 import Home from "./pages/HomePage";
 import SampleComponent from "./pages/SampleContextUsage";
+import QuizPage from "./pages/QuizPage";
 
 const basename = import.meta.env.BASE_URL;
 
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
 	  {
 		path: "/context",
 		element: <SampleComponent />
+	  },
+	  {
+		path: "/quiz",
+		element: <QuizPage />
 	  },
     ],
   },
