@@ -42,6 +42,14 @@ export const router = createBrowserRouter([
 		path: "/context",
 		element: <SampleComponent />
 	  },
+	  {
+		path: "/test",
+		element: <TestingComponentt />
+	  },
+	  {
+		path: "/chatbot",
+		element: <Chatbot_UI />
+	  },
     ],
   },
   {
