@@ -8,6 +8,7 @@ import SignInPage from "./pages/SignIn";
 import ProfilePage from "./pages/ProfilePage";
 import Home from "./pages/HomePage";
 import SampleComponent from "./pages/SampleContextUsage";
+import Chatbot_UI from "./pages/Chatbot_UI";
 
 const basename = import.meta.env.BASE_URL;
 
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
 		path: "/context",
 		element: <SampleComponent />
 	  },
+    {
+    path: "/chatbot_ui",
+		element: <Chatbot_UI />
+    }
     ],
   },
   {
