@@ -12,7 +12,10 @@ const RewardSchema = new Schema({
 	status:{
 		type: String,
 		default:"Beginner"
+	},
+	username:{
+		type: String
 	}
 });
 
-module.exports=mongoose.model('rewards', RewardSchema);
+module.exports=mongoose.model('reward_points', RewardSchema);

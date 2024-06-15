@@ -14,7 +14,7 @@ router.post("/update-rewards", ClerkExpressWithAuth(), async (req, res) => {
     const { phone_no } = req.auth.sessionClaims;
     console.log("User phone no extracted from JWT:", phone_no);
 
-    let user = await User.findOne({ phone: phone_no });
+    let user = await User.findOne({ phoneNo: phone_no });
 
     if (user) {
       let reward = await Reward.findOne({ user: user._id });
@@ -25,8 +25,9 @@ router.post("/update-rewards", ClerkExpressWithAuth(), async (req, res) => {
       // Update the reward points
       reward.points += req.body.points;
       await reward.save();
-    }
-    if (!user) {
+
+      return res.status(200).send("Rewards updated successfully");
+    } else {
       return res.status(404).send("User not found");
     }
   } catch (error) {
@@ -38,9 +39,18 @@ router.post("/update-rewards", ClerkExpressWithAuth(), async (req, res) => {
 router.post("/leaderboard", async (req, res) => {
   try {
     // Fetch reward information sorted by points in descending order
-    let rewardInfo = await Reward.find().sort({ points: -1 });
+	console.log("heyy")
+    let rewardInfo = await Reward.find();
+	console.log(rewardInfo)
 
-    return res.status(200).json(rewardInfo);
+    // Format the rewardInfo to include username
+    let leaderboard = rewardInfo.map(reward => ({
+      username: reward.username,
+      points: reward.points,
+      status: reward.status
+    }));
+
+    return res.status(200).json(leaderboard);
   } catch (error) {
     console.error("Failed to fetch leaderboard:", error.message);
     res.status(500).send("Internal Server Error");
