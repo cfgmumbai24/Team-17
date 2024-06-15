@@ -8,52 +8,46 @@ import SignInPage from "./pages/SignIn";
 import ProfilePage from "./pages/ProfilePage";
 import Home from "./pages/HomePage";
 import SampleComponent from "./pages/SampleContextUsage";
+import Chatbot_UI from "./pages/Chatbot_UI";
 import TestingComponent from "./pages/TestingComponent/TestingComponent";
 
 const basename = import.meta.env.BASE_URL;
 
-export const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <AppLayout />,
-      children: [
-        {
-          path: "sign-in",
-          element: <SignInPage />,
-        },
-        {
-          path: "sample",
-          element: <Sample />,
-        },
-        {
-          path: "empty",
-          element: <Empty />,
-        },
-        {
-          path: "profile",
-          element: <ProfilePage />,
-        },
-        {
-          path: "/",
-          element: <Home />,
-        },
-        {
-          path: "/context",
-          element: <SampleComponent />,
-        },
-        {
-          path: "/test",
-          element: <TestingComponent />,
-        },
-      ],
-    },
-    {
-      path: "*",
-      element: <NoMatch />,
-    },
-  ],
+export const router = createBrowserRouter([
   {
-    basename: basename,
-  }
-);
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "sign-in",
+        element: <SignInPage />,
+      },
+      {
+        path: "sample",
+        element: <Sample />,
+      },
+      {
+        path: "empty",
+        element: <Empty />,
+      },
+	  {
+		path: "profile",
+		element: <ProfilePage/>
+	  },
+	  {
+		path: "/",
+		element: <Home />
+	  },
+	  {
+		path: "/context",
+		element: <SampleComponent />
+	  },
+    ],
+  },
+  {
+    path: "*",
+    element: <NoMatch />,
+  },
+], {
+  basename: basename
+});
