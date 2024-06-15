@@ -4,9 +4,12 @@ import PyPDF2
 import openai
 import os
 import json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
-CORS(app, resources={r'/*': {'origins': '*'}})
+CORS(app)  # Enable CORS for all routes
 
 # Set the OpenAI API key
 openai.api_key = os.getenv('OPENAI_API_KEY')
