@@ -1,0 +1,63 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+  - story: ask how vpby works
+    steps:
+      - intent: ask_vpby_how_it_works
+      - action: utter_ask_vpby_how_it_works
+
+  - story: ask vpby pension amount
+    steps:
+      - intent: ask_vpby_pension_amount
+      - action: utter_ask_vpby_pension_amount
+
+  - story: ask vpby tax benefits
+    steps:
+      - intent: ask_vpby_tax_benefits
+      - action: utter_ask_vpby_tax_benefits
+
+  - story: ask ppf benefits
+    steps:
+      - intent: ask_ppf_benefits
+      - action: utter_ask_ppf_benefits
+
+  - story: ask ppf min investment
+    steps:
+      - intent: ask_ppf_min_investment
+      - action: utter_ask_ppf_min_investment
+
+  - story: ask ppf max investment
+    steps:
+      - intent: ask_ppf_max_investment
+      - action: utter_ask_ppf_max_investment
+
+  - story: interactive_story_1
+    steps:
+      - intent: ask_vpby_how_it_works
+      - action: utter_ask_vpby_how_it_works
