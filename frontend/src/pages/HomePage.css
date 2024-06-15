@@ -2,7 +2,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff8e1;
+    background-color: #ffffff;
     width: 100%;
   }
   
@@ -87,14 +87,14 @@
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    color: #662fe2;
+    color: white;
     width: 100%;
     height: 80px;
   }
   
   .stat {
     margin: 0 10px;
-    background-color: #f9f9f9;
+    background-color: #662fe2;
     padding: 10px 20px;
     border:#000;
     border-radius: 4px;
@@ -127,12 +127,14 @@
     font-size: 24px;
     font-weight: 400;
     color: white;
-    background-color: #007BFF; /* Customize the button color */
-    border: none;
-    border-radius: 5px;
+    background-color: #662fe2; /* Customize the button color */
+    border: 1px solid gray;
+    border-radius: 50px;
+    width: auto;
     cursor: pointer;
     transition: background-color 0.3s;
     /* margin: 100px; */
+  
     
 
   }
@@ -141,5 +143,6 @@
     background-color: #ffffff; 
     border: #007BFF;/* Darker shade for hover effect */
     color: #007BFF;
+    border: 2px solid #662fe2;
   }
   

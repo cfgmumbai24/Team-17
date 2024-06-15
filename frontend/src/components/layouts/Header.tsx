@@ -7,6 +7,7 @@ import { appConfig } from "@/config/app";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ModeToggle } from "../mode-toggle";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
+import {GlobeAltIcon} from "@heroicons/react/24/outline";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -22,6 +23,7 @@ import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { Logo } from "../logo";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { UserButton, useUser } from "@clerk/clerk-react";
+import './Header.css';
 
 export function Header() {
     const [open, setOpen] = useState(false);
@@ -34,7 +36,9 @@ export function Header() {
                 <div className="mr-4 hidden md:flex">
                     <NavLink to="/" className="mr-6 flex items-center space-x-2">
                         <Logo />
-                        <span className="font-bold inline-block">Multiply</span>
+                    
+                        
+                        <span className="font-bold inline-block"><img src="Multiplylogo.svg" alt='/'/>Multiply++</span>
                     </NavLink>
                     <nav className="flex items-center space-x-6 text-sm font-medium">
                         {mainMenu.map((menu, index) =>
@@ -177,10 +181,10 @@ export function Header() {
 
                             <span className="sr-only">WhatsApp</span>
                         </a>
-                        <a href="/change-language" title="Change Language">
-                            {/* <Icons.language className="h-7 w-7 text-purple-500" /> */}
-                            <span className="sr-only">Change Language</span>
-                        </a>
+                        {
+                            isSignedIn ? <UserButton afterSignOutUrl="/" /> :
+                                <Link to='/'><GlobeAltIcon className="w-8 h-8" /></Link>
+                        }
                         {
                             isSignedIn ? <UserButton afterSignOutUrl="/" /> :
                                 <Link to='/sign-in'><UserCircleIcon className="w-8 h-8" /></Link>

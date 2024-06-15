@@ -12,7 +12,7 @@ export function AppLayout() {
     <div className="flex flex-col h-screen">
       <Header />
       {/* <div className="flex flex-row flex-grow"> */}
-        {isSignedIn && <SideNav />}
+        {/* {isSignedIn && <SideNav />} */}
         <div className="flex flex-col flex-grow">
           <div className="container px-4 md:px-8 flex-grow flex flex-col ml-64">
             <Outlet />

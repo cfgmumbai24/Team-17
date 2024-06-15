@@ -23,7 +23,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 import './HomePage.css';
-import Banner_img from '../components/Assests/BannerImage.png';
+import Banner_img from '../components/Assests/Multiply.svg';
 
 export default function Home() {
   return (
