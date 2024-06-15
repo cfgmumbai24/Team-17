@@ -13,6 +13,7 @@ connectToMongo();
 
 // ROUTES //
 const authRouter = require("./routes/auth");
+const rewardRoutes=require("./routes/rewards");
 
 // APP creation
 const app = express();
@@ -29,6 +30,8 @@ app.get("/", (req, res) => {
 
 // ROUTES //
 app.use("/auth", authRouter);
+app.use('/rewards', rewardRoutes);
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

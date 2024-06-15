@@ -9,6 +9,7 @@ import ProfilePage from "./pages/ProfilePage";
 import Home from "./pages/HomePage";
 import SampleComponent from "./pages/SampleContextUsage";
 import QuizPage from "./pages/QuizPage";
+import Leaderboard from "./pages/Leaderboard";
 
 const basename = import.meta.env.BASE_URL;
 
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
 	  {
 		path: "/quiz",
 		element: <QuizPage />
+	  },
+	  {
+		path: "/leaderboard",
+		element: <Leaderboard />
 	  },
     ],
   },
