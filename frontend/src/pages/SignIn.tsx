@@ -4,7 +4,7 @@ import { SignIn } from '@clerk/clerk-react';
 function SignInPage() {
   return (
     <div>
-      <SignIn afterSignInUrl='/'/>
+      <SignIn afterSignInUrl='/protected'/>
     </div>
   );
 }
