@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './FaqPage.css';
 import {
   Accordion,
   AccordionContent,
@@ -39,6 +40,7 @@ const FaqPage: React.FC = () => {
   }
 
   return (
+    <div className='faq-css'>
     <>
       {Object.keys(faqData).map((category, categoryIndex) => (
         <div key={categoryIndex} className="my-4">
@@ -54,7 +56,9 @@ const FaqPage: React.FC = () => {
         </div>
       ))}
     </>
+    </div>
   );
+  
 };
 
 export default FaqPage;
