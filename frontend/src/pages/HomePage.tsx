@@ -59,7 +59,15 @@ export default function Home() {
           <div className="help-section">
             <h1>Get Started With</h1>
             <div className="help-tags">
-              <button className="action-button"> Learn With Us</button>
+              <button
+                className="action-button"
+                onClick={() => {
+                  navigateTo(String.raw`/quiz`);
+                }}
+              >
+                {" "}
+                Get Started With Learning!
+              </button>
               <button
                 className="action-button"
                 onClick={() => {
@@ -67,7 +75,7 @@ export default function Home() {
                 }}
               >
                 {" "}
-                Get Help
+                Need Help?
               </button>
             </div>
           </div>
