@@ -8,6 +8,8 @@ import SignInPage from "./pages/SignIn";
 import ProfilePage from "./pages/ProfilePage";
 import Home from "./pages/HomePage";
 import SampleComponent from "./pages/SampleContextUsage";
+import QuizPage from "./pages/QuizPage";
+import Leaderboard from "./pages/Leaderboard";
 import FaqPage from "./pages/FaqPage/FaqPage";
 import Chatbot from "./pages/Chatbot_UI/Chatbot_UI";
 
@@ -41,6 +43,14 @@ export const router = createBrowserRouter([
 	  {
 		path: "/context",
 		element: <SampleComponent />
+	  },
+	  {
+		path: "/quiz",
+		element: <QuizPage />
+	  },
+	  {
+		path: "/leaderboard",
+		element: <Leaderboard />
 	  },
 	  {
 		path: "/faq",
