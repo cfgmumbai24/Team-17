@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Chatbot_UI.css";
 import { MarginIcon } from "@radix-ui/react-icons";
-import usespeechToText from "./useSpeechToText";
+import usespeechToText from "./useSpeechToText.js";
 interface Message {
   sender: "user" | "bot";
   text: string;
@@ -85,7 +85,7 @@ const Chatbot: React.FC = () => {
       <div style={styles.topBar}>
         <label>
           Select Language:
-          <select
+          <select className="select-language"
             value={language}
             onChange={(e) => handleLanguageChange(e.target.value)}
           >

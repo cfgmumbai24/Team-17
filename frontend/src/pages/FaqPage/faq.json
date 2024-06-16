@@ -14,7 +14,7 @@
           "answer": "Premiums are eligible for tax deduction under Section 80C up to Rs. 1.5 lakh per year. The pension received is taxable."
         },
         {
-          "question": "Can the pensioner surrender the policy before the completion of the 10-year period?",
+          "question":"Can the pensioner surrender the policy before the completion of the 10-year period?",
           "answer": "Yes, the policy can be surrendered before 10 years. The surrender value depends on the policy term and the pensioner's age."
         },
         {
@@ -26,7 +26,7 @@
           "answer": "The scheme offers lifetime payment as long as the pensioner is alive, subject to providing Existence Certificates."
         },
         {
-          "question": "Will my spouse continue to receive an annuity after me?",
+          "question":"Will my spouse continue to receive an annuity after me?",
           "answer": "The purchase price is returned to the beneficiary upon the pensioner's death. Annuities stop after the pensioner's death."
         }
       ]
@@ -34,35 +34,35 @@
     "Public Provident Fund": {
       "FAQs": [
         {
-          "question": "What is the minimum investment amount in PPF?",
+          "question":"What is the minimum investment amount in PPF?",
           "answer": "The minimum investment amount in PPF is ₹500 per year."
         },
         {
-          "question": "What is the maximum investment amount in PPF?",
+          "question":"What is the maximum investment amount in PPF?",
           "answer": "The maximum investment amount in PPF is ₹1.5 lakh per year."
         },
         {
-          "question": "What is the interest rate on PPF?",
+          "question":"What is the interest rate on PPF?",
           "answer": "The current interest rate for PPF is 7.1% per annum."
         },
         {
-          "question": "What is the lock-in period for PPF?",
+          "question":"What is the lock-in period for PPF?",
           "answer": "The lock-in period for PPF is 15 years, with partial withdrawals allowed after the 7th year."
         },
         {
-          "question": "What is the maturity amount of PPF?",
+          "question":"What is the maturity amount of PPF?",
           "answer": "The maturity amount includes the invested amount, interest earned, and any bonus."
         },
         {
-          "question": "Can I withdraw money from my PPF account before maturity?",
+          "question":"Can I withdraw money from my PPF account before maturity?",
           "answer": "Yes, up to 50% of the balance after the 5th year, and the entire amount after 15 years."
         },
         {
-          "question": "What are the tax benefits of PPF?",
+          "question":"What are the tax benefits of PPF?",
           "answer": "Investments are deductible under Section 80C up to ₹1.5 lakh per year, offering a tax saving of up to ₹15,000."
         },
         {
-          "question": "How do I open a PPF account?",
+          "question":"How do I open a PPF account?",
           "answer": "You can open a PPF account at any post office or authorized bank with PAN card, Aadhaar card, and proof of residence."
         }
       ]
@@ -70,27 +70,27 @@
     "Pradhan Mantri Fasal Bima Yojana": {
       "FAQs": [
         {
-          "question": "What is Crop Insurance?",
+          "question":"What is Crop Insurance?",
           "answer": "Crop insurance protects against financial losses due to crop failures/losses from unforeseen perils."
         },
         {
-          "question": "What is Weather based Crop Insurance?",
+          "question":"What is Weather based Crop Insurance?",
           "answer": "It mitigates financial loss from anticipated crop loss due to adverse weather conditions like rainfall, temperature, frost, and humidity."
         },
         {
-          "question": "What are the different types of crops covered?",
+          "question":"What are the different types of crops covered?",
           "answer": "1) Food crops (Cereals, Millets, Pulses), 2) Oilseeds, 3) Annual Commercial / Annual Horticultural crops."
         },
         {
-          "question": "What is the Sum Insured / Coverage Limit?",
+          "question":"What is the Sum Insured / Coverage Limit?",
           "answer": "Sum insured equals the Scale of Finance per hectare multiplied by the area of the notified crop."
         },
         {
-          "question": "What are Premium Rates and Premium Subsidy?",
+          "question":"What are Premium Rates and Premium Subsidy?",
           "answer": "Farmers pay 2% of SI for Kharif crops, 1.5% for Rabi crops, and 5% for Annual Commercial / Annual Horticultural crops."
         },
         {
-          "question": "Which companies provide Crop Insurance?",
+          "question":"Which companies provide Crop Insurance?",
           "answer": "Companies include Agriculture Insurance Company, Cholamandalam MS, Reliance General, Bajaj Allianz, HDFC ERGO, IFFCO Tokio, and more."
         }
       ]
