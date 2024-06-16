@@ -55,6 +55,7 @@ const useSpeechToText = (defaultLanguage = "en-US") => {
     (newLanguage) => {
       console.log(language);
       setLanguage(newLanguage);
+      console.log(newLanguage);
       if (isListening) {
         stopListening();
         startListening();

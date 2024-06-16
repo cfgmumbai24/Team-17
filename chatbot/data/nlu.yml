@@ -1,658 +1,655 @@
 version: "3.1"
 nlu:
-  - intent: greet
-    examples: |
-      - hey
-      - hello
-      - hi
-      - hello there
-      - good morning
-      - good evening
-      - moin
-      - hey there
-      - let's go
-      - hey dude
-      - goodmorning
-      - goodevening
-      - good afternoon
-      - hey buddy
-      - howdy
-      - hi there
-      - greetings
-      - salutations
-      - yo
-      - what's up
-      - नमस्ते
-      - हाय
-      - सुप्रभात
-      - शुभ संध्या
-      - नमस्कार
-      - काय चाललंय?
-  - intent: goodbye
-    examples: |
-      - cu
-      - good by
-      - cee you later
-      - good night
-      - bye
-      - goodbye
-      - have a nice day
-      - see you around
-      - bye bye
-      - see you later
-      - catch you later
-      - see ya
-      - take care
-      - farewell
-      - so long
-      - I'm out
-      - peace out
-      - talk to you later
-      - gotta go
-      - till next time
-      - अलविदा
-      - फिर मिलेंगे
-      - बाय बाय
-      - नमस्ते
-      - भेटूया नंतर
-  - intent: affirm
-    examples: |
-      - yes
-      - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
-      - absolutely
-      - definitely
-      - sure
-      - sure thing
-      - yup
-      - that's right
-      - exactly
-      - sounds good
-      - you bet
-      - I agree
-      - totally
-      - right
-      - precisely
-      - affirmative
-      - हाँ
-      - बिलकुल
-      - सही है
-      - नक्कीच
-      - होय
-  - intent: deny
-    examples: |
-      - no
-      - n
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
-      - nope
-      - nah
-      - not at all
-      - absolutely not
-      - no thanks
-      - not interested
-      - I don't agree
-      - not in a million years
-      - negative
-      - no chance
-      - out of the question
-      - under no circumstances
-      - नहीं
-      - बिल्कुल नहीं
-      - नकार
-      - नाही
-  - intent: mood_great
-    examples: |
-      - perfect
-      - great
-      - amazing
-      - feeling like a king
-      - wonderful
-      - I am feeling very good
-      - I am great
-      - I am amazing
-      - I am going to save the world
-      - super stoked
-      - extremely good
-      - so so perfect
-      - so good
-      - so perfect
-      - fantastic
-      - awesome
-      - over the moon
-      - thrilled
-      - on cloud nine
-      - in high spirits
-      - loving life
-      - couldn't be better
-      - flying high
-      - in seventh heaven
-      - delighted
-      - jubilant
-      - ecstatic
-      - pumped up
-      - energized
-      - feeling blessed
-      - मैं बहुत अच्छा महसूस कर रहा हूँ
-      - मैं बहुत खुश हूँ
-      - मी खूप आनंदी आहे
-      - छान
-      - मला खूप आनंद झाला आहे
-      - मैं बहुत अच्छा हूँ
-      - माझा दिवस छान चालला आहे
-  - intent: mood_unhappy
-    examples: |
-      - my day was horrible
-      - I am sad
-      - I don't feel very well
-      - I am disappointed
-      - super sad
-      - I'm so sad
-      - sad
-      - very sad
-      - unhappy
-      - not good
-      - not very good
-      - extremely sad
-      - so saad
-      - so sad
-      - I feel terrible
-      - not feeling great
-      - down in the dumps
-      - miserable
-      - feeling blue
-      - not my day
-      - having a rough day
-      - feeling low
-      - I'm upset
-      - not feeling it
-      - I'm down
-      - it's a bad day
-      - things are not good
-      - feeling hopeless
-      - I'm in a funk
-      - I'm heartbroken
-      - really down
-      - everything's awful
-      - it's been tough
-      - in a bad mood
-      - मेरा दिन बहुत खराब था
-      - मैं दुखी हूँ
-      - मैं बहुत अच्छा महसूस नहीं कर रहा हूँ
-      - मैं निराश हूँ
-      - मेरा मूड खराब है
-      - माझा दिवस खराब गेला
-      - मी दु:खी आहे
-      - मी निराश आहे
-      - माझा मूड खराब आहे
-      - मैं बहुत उदास हूँ
-      - मी खूप खिन्न आहे
-      - आजचा दिवस वाईट होता
-      - मेरी तबियत ठीक नहीं है
-  - intent: bot_challenge
-    examples: |
-      - are you a bot?
-      - are you a human?
-      - am I talking to a bot?
-      - am I talking to a human?
-      - are you an AI?
-      - is this a bot I'm talking to?
-      - you're a bot, right?
-      - are you real?
-      - are you a chatbot?
-      - is this conversation automated?
-      - are you a machine?
-      - are you programmed?
-      - are you an algorithm?
-      - are you artificial intelligence?
-      - can you prove you're human?
-      - who built you?
-      - how do I know you're not a bot?
-      - you're not real, are you?
-      - are you a program?
-      - am I chatting with AI?
-      - are you just a script?
-      - you're not a real person, right?
-      - are you a robot?
-      - is this a real conversation?
-      - क्या आप एक बॉट हैं?
-      - क्या आप इंसान हैं?
-      - क्या मैं एक बॉट से बात कर रहा हूँ?
-      - क्या मैं इंसान से बात कर रहा हूँ?
-      - तू रोबोट आहेस का?
-      - तू बॉट आहेस का?
-  - intent: ask_vpby_benefits
-    examples: |
-      - What are the benefits of VPBY?
-      - Tell me about the benefits of Varishtha Pension Bima Yojana
-      - What advantages does VPBY offer?
-      - What are the main benefits of VPBY?
-      - List the benefits of Varishtha Pension Bima Yojana
-      - Why should I choose VPBY?
-      - Is VPBY beneficial?
-      - What are the perks of VPBY?
-      - How can VPBY help me?
-      - Why is VPBY a good option?
-      - What does VPBY offer?
-      - Explain the benefits of VPBY
-      - What makes VPBY advantageous?
-      - Is VPBY worth investing in?
-      - What are the key advantages of VPBY?
-      - Can you tell me why VPBY is beneficial?
-      - Why invest in VPBY?
-      - What's good about VPBY?
-      - How does VPBY benefit me?
-      - Are there any special benefits of VPBY?
-      - वीपीबीवाई के क्या लाभ हैं?
-      - वरिष्ठ पेंशन बीमा योजना के लाभों के बारे में बताएं
-      - वीपीबीवाई क्या लाभ प्रदान करता है?
-      - वीपीबीवाई के मुख्य लाभ क्या हैं?
-      - वरिष्ठ पेंशन बीमा योजना के लाभों की सूची बनाएं
-      - मुझे वीपीबीवाई क्यों चुनना चाहिए?
-      - क्या वीपीबीवाई फायदेमंद है?
-      - वीपीबीवाई के लाभ क्या हैं?
-      - वीपीबीवाई मेरी कैसे मदद कर सकता है?
-      - वीपीबीवाई एक अच्छा विकल्प क्यों है?
-      - वीपीबीवाई क्या ऑफर करता है?
-      - VPBY के फायदे क्या हैं?
-      - वरिष्ठ पेंशन बीमा योजना के लाभ क्या हैं?
-      - VPBY चे फायदे काय आहेत?
-      - वरिष्ठ पेंशन विमा योजनेचे फायदे काय आहेत?
-      - VPBY से क्या लाभ हैं?
-      - VPBY से मुझे क्या फायदे मिल सकते हैं?
-      - VPBY का लाभ क्यों लेना चाहिए?
-      - VPBY में निवेश करने के फायदे क्या हैं?
-      - VPBY योजना से क्या लाभ होंगे?
-      - वरिष्ठ पेंशन बीमा योजना के मुख्य लाभ क्या हैं?
-      - VPBY के महत्वपूर्ण फायदे क्या हैं?
-      - VPBY योजना के फायदे बताएं
-      - VPBY योजना में निवेश क्यों करें?
-      - VPBY योजना से क्या फायदे मिलते हैं?
-      - VPBY कसे फायदेशीर आहे?
-      - VPBY कसे फायदेशीर ठरू शकते?
-      - VPBY योजना का फायदा काय आहेत?
-      - वरिष्ठ पेंशन विमा योजना का फायदे काय आहेत?
-      - VPBY योजना का फायदे सांगा
-      - VPBY योजना में गुंतवणूक का फायदे काय आहेत?
-      - VPBY योजना का गुंतवणूक का मुख्य फायदे काय आहेत?
-      - VPBY चे फायदे काय आहेत?
-      - वरिष्ठा पेन्शन विमा योजनेच्या फायद्यांबद्दल मला सांगा
-      - VPBY कोणते फायदे देते?
-      - VPBY चे मुख्य फायदे काय आहेत?
-      - वरिष्ठ पेन्शन विमा योजनेच्या लाभांची यादी करा
-      - मी VPBY का निवडावे?
-      - VPBY फायदेशीर आहे का?
-      - VPBY चे फायदे काय आहेत?
-      - VPBY मला कशी मदत करू शकेल?
-      - VPBY हा एक चांगला पर्याय का आहे?
-      - VPBY काय ऑफर करते?
-  - intent: ask_vpby_how_it_works
-    examples: |
-      - How does VPBY work?
-      - Explain how Varishtha Pension Bima Yojana works
-      - What is the working process of VPBY?
-      - Can you explain how VPBY operates?
-      - What is the procedure of VPBY?
-      - How do I participate in VPBY?
-      - Describe the working mechanism of VPBY
-      - How does one enroll in VPBY?
-      - What are the steps to join VPBY?
-      - How is VPBY structured?
-      - What's the process of VPBY?
-      - How do I get started with VPBY?
-      - Explain the VPBY process
-      - How can I apply for VPBY?
-      - What's involved in VPBY?
-      - How does the VPBY plan function?
-      - What is needed to start with VPBY?
-      - How does the pension scheme of VPBY work?
-      - वीपीबीवाई कैसे काम करता है?
-      - बताएं कि वरिष्ठ पेंशन बीमा योजना कैसे काम करती है
-      - VPBY की कार्य प्रक्रिया क्या है?
-      - क्या आप बता सकते हैं कि VPBY कैसे संचालित होता है?
-      - VPBY की प्रक्रिया क्या है?
-      - मैं वीपीबीवाई में कैसे भाग ले सकता हूं?
-      - वीपीबीवाई की कार्य प्रणाली का वर्णन करें
-      - वीपीबीवाई में कोई कैसे नामांकन कर सकता है?
-      - वीपीबीवाई में शामिल होने के लिए क्या कदम हैं?
-      - वीपीबीवाई कैसे संरचित है?
-      - VPBY कैसे काम करता है?
-      - वरिष्ठ पेंशन बीमा योजना कैसे काम करती है?
-      - VPBY योजना की प्रक्रिया क्या है?
-      - VPBY कैसे संचालित होता है?
-      - VPBY में भाग लेने की प्रक्रिया क्या है?
-      - VPBY योजना का कार्यप्रणाली समझाएं
-      - VPBY मध्ये कसे सहभागी व्हावे?
-      - वरिष्ठ पेंशन विमा योजना कशी काम करते?
-      - VPBY योजना का प्रक्रिया काय आहे?
-      - VPBY योजना में सामील होने के कदम क्या हैं?
-      - VPBY योजना में सहभाग कसा घ्यायचा?
-      - VPBY योजना कसे काम करते?
-      - VPBY कसे कार्य करते?
-      - VPBY योजना की प्रक्रिया काय आहे?
-      - VPBY योजना का कार्यप्रणाली काय आहे?
-      - VPBY योजना का कामगिरी काय आहे?
-      - VBpy कैसे काम करता है
-      - VPBY कसे कार्य करते?
-      - वरिष्ठा पेन्शन विमा योजना कशी कार्य करते ते स्पष्ट करा
-      - VPBY ची कार्यप्रक्रिया काय आहे?
-      - VPBY कसे चालते ते तुम्ही स्पष्ट करू शकता?
-      - VPBY ची प्रक्रिया काय आहे?
-      - मी VPBY मध्ये कसा भाग घेऊ?
-      - VPBY च्या कार्यप्रणालीचे वर्णन करा
-      - VPBY मध्ये नोंदणी कशी होते?
-      - VPBY मध्ये सामील होण्यासाठी कोणत्या पायऱ्या आहेत?
-      - VPBY ची रचना कशी आहे?
-  - intent: ask_vpby_pension_amount
-    examples: |
-      - What is the minimum pension amount under VPBY?
-      - What is the maximum pension amount under Varishtha Pension Bima Yojana?
-      - How much pension can I get from VPBY?
-      - What's the pension amount in VPBY?
-      - How is the pension amount decided in VPBY?
-      - What's the range of pension in VPBY?
-      - How much can I earn as pension from VPBY?
-      - What's the highest pension in VPBY?
-      - What's the lowest pension in VPBY?
-      - How is pension calculated in VPBY?
-      - What's the monthly pension in VPBY?
-      - How does VPBY determine pension amounts?
-      - What's the pension limit in VPBY?
-      - How much pension can I expect from VPBY?
-      - What are the pension options in VPBY?
-      - How is the pension amount determined in VPBY?
-      - What's the maximum pension from VPBY?
-      - What's the minimum pension from VPBY?
-      - VPBY में न्यूनतम पेंशन राशि क्या है?
-      - VPBY के अंतर्गत न्यूनतम पेंशन राशि क्या है?
-      - वरिष्ठ पेंशन बीमा योजना के अंतर्गत अधिकतम पेंशन राशि क्या है?
-      - VPBY से मुझे कितनी पेंशन मिल सकती है?
-      - VPBY में पेंशन राशि क्या है?
-      - VPBY में पेंशन राशि कैसे तय की जाती है?
-      - VPBY में पेंशन की सीमा क्या है?
-      - मैं वीपीबीवाई से पेंशन के रूप में कितना कमा सकता हूं?
-      - VPBY में सबसे अधिक पेंशन क्या है?
-      - वीपीबीवाई में सबसे कम पेंशन क्या है?
-      - VPBY में पेंशन की गणना कैसे की जाती है?
-      - वीपीबीवाई में मासिक पेंशन क्या है?
-      - वरिष्ठ पेंशन बीमा योजना में अधिकतम पेंशन राशि क्या है?
-      - VPBY मध्ये किमान पेन्शन रक्कम किती आहे?
-      - वरिष्ठ पेंशन विमा योजनेत कमाल पेन्शन रक्कम किती आहे?
-      - VPBY में पेंशन की राशि कितनी है?
-      - VPBY योजना का पेंशन किती आहे?
-      - VPBY योजना मध्ये पेन्शन कसे निश्चित होते?
-      - VPBY योजना का पेन्शन किती असते?
-      - VPBY योजना का मासिक पेन्शन किती आहे?
-      - VPBY योजना का किमान पेन्शन किती आहे?
-      - VPBY योजना का कमाल पेन्शन किती आहे?
-      - VPBY योजना का पेन्शन रक्कम कसे निश्चित होते?
-      - VPBY योजना का मासिक पेन्शन कसे असते?
-      - VPBY अंतर्गत किमान पेन्शन रक्कम किती आहे?
-      - वरिष्ठा पेन्शन विमा योजनेअंतर्गत जास्तीत जास्त पेन्शनची रक्कम किती आहे?
-      - VPBY कडून मला किती पेन्शन मिळू शकते?
-      - VPBY मध्ये पेन्शनची रक्कम किती आहे?
-      - VPBY मध्ये पेन्शनची रक्कम कशी ठरवली जाते?
-      - VPBY मध्ये पेन्शनची श्रेणी किती आहे?
-      - मी VPBY मधून पेन्शन म्हणून किती कमवू शकतो?
-      - VPBY मध्ये सर्वात जास्त पेन्शन किती आहे?
-      - VPBY मध्ये सर्वात कमी पेन्शन किती आहे?
-      - VPBY मध्ये पेन्शनची गणना कशी केली जाते?
-      - VPBY मध्ये मासिक पेन्शन किती आहे?
-  - intent: ask_vpby_tax_benefits
-    examples: |
-      - What are the tax benefits of VPBY?
-      - Does Varishtha Pension Bima Yojana offer tax benefits?
-      - Can I get tax deductions for investing in VPBY?
-      - What tax deductions are available in VPBY?
-      - Can VPBY help me save on taxes?
-      - What are the tax advantages of VPBY?
-      - Does VPBY offer tax savings?
-      - Are there any tax benefits in VPBY?
-      - How does VPBY affect my taxes?
-      - Can I get tax relief with VPBY?
-      - What are the tax perks of VPBY?
-      - Is VPBY tax-exempt?
-      - What's the tax status of VPBY?
-      - Does VPBY offer tax deductions?
-      - How does investing in VPBY impact taxes?
-      - Are there any tax incentives in VPBY?
-      - What are the tax benefits related to VPBY?
-      - How does VPBY help in tax planning?
-      - Can VPBY investments be tax-deductible?
-      - Does VPBY provide any tax breaks?
-      - VPBY के कर लाभ क्या हैं?
-      - वरिष्ठ पेंशन बीमा योजना के कर लाभ क्या हैं?
-      - VPBY चे कर फायदे काय आहेत?
-      - वीपीबीवाई के कर लाभ क्या हैं?
-      - क्या वरिष्ठ पेंशन बीमा योजना कर लाभ प्रदान करती है?
-      - क्या मुझे वीपीबीवाई में निवेश पर कर कटौती मिल सकती है?
-      - वीपीबीवाई में कौन सी कर कटौती उपलब्ध हैं?
-      - क्या वीपीबीवाई मुझे कर बचाने में मदद कर सकता है?
-      - वीपीबीवाई के कर लाभ क्या हैं?
-      - क्या वीपीबीवाई कर बचत की पेशकश करता है?
-      - क्या वीपीबीवाई में कोई कर लाभ है?
-      - वीपीबीवाई मेरे करों को कैसे प्रभावित करता है?
-      - क्या मुझे वीपीबीवाई से कर राहत मिल सकती है?
-      - वीपीबीवाई के कर लाभ क्या हैं?
-      - क्या वीपीबीवाई कर-मुक्त है
-      - वरिष्ठ पेंशन विमा योजनेचे कर लाभ काय आहेत?
-      - VPBY योजना का कर लाभ काय आहेत?
-      - VPBY योजना में कर बचत कसे होऊ शकते?
-      - VPBY योजना का कर लाभ कसे मिळू शकतात?
-      - VPBY योजना में कर योजना कसे मदद करते?
-      - VPBY योजना का कर लाभ सांगा
-      - VPBY योजना का कर फायदा काय आहेत?
-      - VPBY योजना का करदायत्व कसे असते?
-      - VPBY योजना का कर सूट काय आहेत?
-      - VPBY योजना का कर व्यतिरिक्त फायदे काय आहेत?
-      - VPBY योजना का गुंतवणूक कसे कर सूट मिळू शकते?
-      - VPBY योजना का गुंतवणूक कसे कर योजने में मदद होऊ शकते?
-      - VPBY चे कर फायदे काय आहेत?
-      - वरिष्ठा पेन्शन विमा योजना कर लाभ देते का?
-      - VPBY मध्ये गुंतवणुकीसाठी मला कर वजावट मिळू शकते का?
-      - VPBY मध्ये कोणती कर कपात उपलब्ध आहे?
-      - VPBY मला कर वाचविण्यात मदत करू शकेल का?
-      - VPBY चे कर फायदे काय आहेत?
-      - VPBY कर बचत देते का?
-      - VPBY मध्ये काही कर लाभ आहेत का?
-      - VPBY माझ्या करांवर कसा परिणाम करते?
-      - मला VPBY सह कर सवलत मिळेल का?
-      - VPBY चे कर लाभ काय आहेत?
-      - VPBY करमुक्त आहे का?
-  - intent: ask_ppf_benefits
-    examples: |
-      - What are the benefits of PPF?
-      - Tell me about the benefits of Public Provident Fund
-      - What advantages does PPF offer?
-      - What are the main benefits of PPF?
-      - List the benefits of Public Provident Fund
-      - Why should I choose PPF?
-      - Is PPF beneficial?
-      - What are the perks of PPF?
-      - How can PPF help me?
-      - Why is PPF a good option?
-      - What does PPF offer?
-      - Explain the benefits of PPF
-      - What makes PPF advantageous?
-      - Is PPF worth investing in?
-      - What are the key advantages of PPF?
-      - Can you tell me why PPF is beneficial?
-      - Why invest in PPF?
-      - What's good about PPF?
-      - How does PPF benefit me?
-      - Are there any special benefits of PPF?
-      - PPF के फायदे क्या हैं?
-      - पीपीएफ के क्या फायदे हैं?
-      - मुझे पब्लिक प्रोविडेंट फंड के फायदों के बारे में बताएं
-      - पीपीएफ क्या लाभ प्रदान करता है?
-      - पीपीएफ के मुख्य लाभ क्या हैं?
-      - सार्वजनिक भविष्य निधि के लाभों की सूची बनाएं
-      - मुझे पीपीएफ क्यों चुनना चाहिए?
-      - क्या पीपीएफ फायदेमंद है?
-      - पीपीएफ के लाभ क्या हैं?
-      - पीपीएफ मेरी कैसे मदद कर सकता है?
-      - पीपीएफ एक अच्छा विकल्प क्यों है?
-      - पीपीएफ क्या ऑफर करता है?
-      - पीपीएफ के फायदे बताएं
-      - सार्वजनिक भविष्य निधि के लाभ क्या हैं?
-      - PPF चे फायदे काय आहेत?
-      - सार्वजनिक भविष्य निर्वाह निधीचे फायदे काय आहेत?
-      - PPF योजना का फायदे काय आहेत?
-      - PPF योजना में कसे फायदे होऊ शकतात?
-      - PPF योजना का गुंतवणूक का फायदे काय आहेत?
-      - PPF योजना का महत्वपूर्ण फायदे काय आहेत?
-      - PPF योजना का फायद्यासाठी कसे फायदेशीर आहे?
-      - PPF योजना का प्रमुख फायदे काय आहेत?
-      - PPF योजना का कसे उपयोगी आहे?
-      - PPF योजना का उपयोगिता काय आहेत?
-      - PPF योजना का फायदेशीरता काय आहेत?
-      - PPF योजना का गुंतवणूक का कारणे काय आहेत?
-      - PPF योजना का फायद्यासाठी कोणते लाभ आहेत?
-      - पीपीएफचे काय फायदे आहेत?
-      - मला सार्वजनिक भविष्य निर्वाह निधीच्या फायद्यांबद्दल सांगा
-      - पीपीएफ कोणते फायदे देते?
-      - पीपीएफचे मुख्य फायदे काय आहेत?
-      - सार्वजनिक भविष्य निर्वाह निधीच्या फायद्यांची यादी करा
-      - मी PPF का निवडावे?
-      - पीपीएफ फायदेशीर आहे का?
-      - पीपीएफचे फायदे काय आहेत?
-      - पीपीएफ मला कशी मदत करू शकेल?
-      - पीपीएफ हा चांगला पर्याय का आहे?
-      - पीपीएफ काय ऑफर करते?
-      - पीपीएफचे फायदे सांगा
-  - intent: ask_ppf_min_investment
-    examples: |
-      - What is the minimum investment amount in PPF?
-      - How much do I need to invest in PPF at minimum?
-      - What is the least amount I can invest in Public Provident Fund?
-      - What's the minimum contribution to PPF?
-      - How little can I invest in PPF?
-      - What's the smallest investment in PPF?
-      - How much do I need to start a PPF account?
-      - What's the entry investment for PPF?
-      - What's the initial investment required for PPF?
-      - How low can my investment be in PPF?
-      - What's the minimum deposit for PPF?
-      - What's the minimum annual investment in PPF?
-      - How much money do I need to invest in PPF initially?
-      - What's the smallest deposit I can make in PPF?
-      - How much should I invest in PPF at least?
-      - What is the least amount I need for PPF?
-      - How much to start investing in PPF?
-      - What's the smallest amount for PPF?
-      - How little can I contribute to PPF?
-      - What's the lowest investment for PPF?
-      - पीपीएफ में न्यूनतम निवेश राशि क्या है?
-      - मुझे पीपीएफ में न्यूनतम कितना निवेश करना होगा?
-      - सार्वजनिक भविष्य निधि में मैं न्यूनतम कितनी राशि निवेश कर सकता हूँ?
-      - पीपीएफ में न्यूनतम योगदान कितना है?
-      - मैं पीपीएफ में कितना कम निवेश कर सकता हूं?
-      - पीपीएफ में सबसे छोटा निवेश क्या है?
-      - पीपीएफ खाता शुरू करने के लिए मुझे कितना पैसा चाहिए?
-      - पीपीएफ के लिए प्रवेश निवेश क्या है?
-      - पीपीएफ के लिए प्रारंभिक निवेश कितना आवश्यक है?
-      - पीपीएफ में मेरा निवेश कितना कम हो सकता है?
-      - पीपीएफ के लिए न्यूनतम जमा राशि क्या है?
-      - पीपीएफ में न्यूनतम वार्षिक निवेश क्या है?
-      - PPF में न्यूनतम निवेश राशि क्या है?
-      - PPF में न्यूनतम योगदान कितना है?
-      - सार्वजनिक भविष्य निधि में कम से कम कितना निवेश कर सकते हैं?
-      - PPF मध्ये किमान गुंतवणूक रक्कम किती आहे?
-      - PPF मध्ये किमान योगदान किती आहे?
-      - सार्वजनिक भविष्य निर्वाह निधीमध्ये कमीत कमी किती गुंतवणूक करू शकतो?
-      - PPF में कम से कम कितनी राशि निवेश कर सकते हैं?
-      - PPF मध्ये कमीत कमी किती गुंतवणूक करता येईल?
-      - PPF योजना का किमान गुंतवणूक रक्कम किती आहे?
-      - PPF योजना का प्रारंभिक गुंतवणूक किती आहे?
-      - PPF योजना का प्रारंभिक गुंतवणूक रक्कम किती आहे?
-      - PPF योजना का प्रारंभिक योगदान किती आहे?
-      - PPF योजना का प्रारंभिक जमा किती आहे?
-      - PPF योजना का प्रारंभिक निवेश किती आहे?
-      - PPF योजना का किमान जमा किती आहे?
-      - PPF योजना का किमान वार्षिक गुंतवणूक किती आहे?
-      - PPF योजना का प्रारंभिक योगदान किती रक्कम आहे?
-      - PPF योजना का किमान गुंतवणूक किती आहे?
-      - PPF मध्ये किमान गुंतवणूक रक्कम किती आहे?
-      - PPF मध्ये मला किमान किती गुंतवणूक करावी लागेल?
-      - मी पब्लिक प्रॉव्हिडंट फंडमध्ये किमान किती रक्कम गुंतवू शकतो?
-      - PPF मध्ये किमान योगदान किती आहे?
-      - मी पीपीएफमध्ये किती कमी गुंतवणूक करू शकतो?
-      - PPF मध्ये सर्वात लहान गुंतवणूक कोणती आहे?
-      - पीपीएफ खाते सुरू करण्यासाठी मला किती पैसे लागतील?
-      - पीपीएफसाठी प्रवेश गुंतवणूक काय आहे?
-      - PPF साठी प्रारंभिक गुंतवणूक किती आवश्यक आहे?
-      - पीपीएफमध्ये माझी गुंतवणूक किती कमी असू शकते?
-      - PPF साठी किमान ठेव किती आहे?
-      - PPF मध्ये किमान वार्षिक गुंतवणूक किती आहे?
-  - intent: ask_ppf_max_investment
-    examples: |
-      - What is the maximum investment amount in PPF?
-      - How much can I invest in PPF at maximum?
-      - What is the highest amount I can invest in Public Provident Fund?
-      - What's the maximum contribution to PPF?
-      - How much can I invest in PPF at most?
-      - What's the largest investment in PPF?
-      - How much can I put into a PPF account?
-      - What's the highest investment for PPF?
-      - What's the maximum deposit for PPF?
-      - What's the maximum annual investment in PPF?
-      - How much money can I invest in PPF?
-      - What's the biggest deposit I can make in PPF?
-      - How much should I invest in PPF at most?
-      - What is the highest amount I need for PPF?
-      - What's the biggest amount for PPF?
-      - How much can I contribute to PPF?
-      - What's the highest investment allowed in PPF?
-      - What's the maximum investment limit for PPF?
-      - How much can I invest in PPF every year?
-      - What's the highest annual investment in PPF?
-      - पीपीएफ के लिए अधिकतम जमा राशि क्या है?
-      - पीपीएफ में अधिकतम वार्षिक निवेश कितना है?
-      - मैं पीपीएफ में कितना पैसा निवेश कर सकता हूं?
-      - पीपीएफ में मैं कितनी बड़ी जमा राशि जमा कर सकता हूं?
-      - मुझे पीपीएफ में अधिकतम कितना निवेश करना चाहिए?
-      - पीपीएफ के लिए मुझे अधिकतम कितनी राशि की आवश्यकता है?
-      - पीपीएफ के लिए सबसे बड़ी रकम क्या है?
-      - मैं पीपीएफ में कितना योगदान कर सकता हूं?
-      - पीपीएफ में अधिकतम कितना निवेश अनुमत है?
-      - पीपीएफ के लिए अधिकतम निवेश सीमा क्या है?
-      - मैं पीपीएफ में हर साल कितना निवेश कर सकता हूं?
-      - PPF में अधिकतम निवेश राशि क्या है?
-      - PPF में अधिकतम योगदान कितना है?
-      - सार्वजनिक भविष्य निधि में अधिक से अधिक कितना निवेश कर सकते हैं?
-      - PPF मध्ये कमाल गुंतवणूक रक्कम किती आहे?
-      - PPF मध्ये कमाल योगदान किती आहे?
-      - सार्वजनिक भविष्य निर्वाह निधीमध्ये कमाल किती गुंतवणूक करू शकतो?
-      - PPF में अधिक से अधिक कितनी राशि निवेश कर सकते हैं?
-      - PPF मध्ये अधिकतम किती गुंतवणूक करता येईल?
-      - PPF योजना का कमाल गुंतवणूक रक्कम किती आहे?
-      - PPF योजना का जास्तीत जास्त गुंतवणूक किती आहे?
-      - PPF योजना का अधिकतम गुंतवणूक रक्कम किती आहे?
-      - PPF योजना का जास्तीत जास्त योगदान किती आहे?
-      - PPF योजना का जास्तीत जास्त जमा किती आहे?
-      - PPF योजना का जास्तीत जास्त वार्षिक गुंतवणूक किती आहे?
-      - PPF योजना का अधिकतम जमा किती आहे?
-      - PPF योजना का अधिकतम गुंतवणूक किती आहे?
-      - PPF योजना का अधिकतम योगदान किती आहे?
-      - PPF योजना का अधिकतम वार्षिक गुंतवणूक किती आहे?
-      - PPF साठी जास्तीत जास्त किती ठेव आहे?
-      - PPF मध्ये जास्तीत जास्त वार्षिक गुंतवणूक किती आहे?
-      - मी पीपीएफमध्ये किती पैसे गुंतवू शकतो?
-      - मी PPF मध्ये सर्वात मोठी ठेव कोणती करू शकतो?
-      - मी पीपीएफमध्ये जास्तीत जास्त किती गुंतवणूक करावी?
-      - PPF साठी मला सर्वात जास्त किती रक्कम हवी आहे?
-      - PPF साठी सर्वात मोठी रक्कम कोणती आहे?
-      - मी PPF मध्ये किती योगदान देऊ शकतो?
-      - PPF मध्ये सर्वाधिक गुंतवणुकीला परवानगी आहे?
-      - PPF साठी गुंतवणुकीची कमाल मर्यादा किती आहे?
-      - मी दरवर्षी पीपीएफमध्ये किती गुंतवणूक करू शकतो?
-  - intent: set_slot
-      - slot set to something
-      - english
-      - hindi
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hey buddy
+    - howdy
+    - hi there
+    - greetings
+    - salutations
+    - yo
+    - what's up
+    - नमस्ते
+    - हाय
+    - सुप्रभात
+    - शुभ संध्या
+    - नमस्कार
+    - काय चाललंय?
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - catch you later
+    - see ya
+    - take care
+    - farewell
+    - so long
+    - I'm out
+    - peace out
+    - talk to you later
+    - gotta go
+    - till next time
+    - अलविदा
+    - फिर मिलेंगे
+    - बाय बाय
+    - नमस्ते
+    - भेटूया नंतर
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - absolutely
+    - definitely
+    - sure
+    - sure thing
+    - yup
+    - that's right
+    - exactly
+    - sounds good
+    - you bet
+    - I agree
+    - totally
+    - right
+    - precisely
+    - affirmative
+    - हाँ
+    - बिलकुल
+    - सही है
+    - नक्कीच
+    - होय
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - nah
+    - not at all
+    - absolutely not
+    - no thanks
+    - not interested
+    - I don't agree
+    - not in a million years
+    - negative
+    - no chance
+    - out of the question
+    - under no circumstances
+    - नहीं
+    - बिल्कुल नहीं
+    - नकार
+    - नाही
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - fantastic
+    - awesome
+    - over the moon
+    - thrilled
+    - on cloud nine
+    - in high spirits
+    - loving life
+    - couldn't be better
+    - flying high
+    - in seventh heaven
+    - delighted
+    - jubilant
+    - ecstatic
+    - pumped up
+    - energized
+    - feeling blessed
+    - मैं बहुत अच्छा महसूस कर रहा हूँ
+    - मैं बहुत खुश हूँ
+    - मी खूप आनंदी आहे
+    - छान
+    - मला खूप आनंद झाला आहे
+    - मैं बहुत अच्छा हूँ
+    - माझा दिवस छान चालला आहे
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremely sad
+    - so saad
+    - so sad
+    - I feel terrible
+    - not feeling great
+    - down in the dumps
+    - miserable
+    - feeling blue
+    - not my day
+    - having a rough day
+    - feeling low
+    - I'm upset
+    - not feeling it
+    - I'm down
+    - it's a bad day
+    - things are not good
+    - feeling hopeless
+    - I'm in a funk
+    - I'm heartbroken
+    - really down
+    - everything's awful
+    - it's been tough
+    - in a bad mood
+    - मेरा दिन बहुत खराब था
+    - मैं दुखी हूँ
+    - मैं बहुत अच्छा महसूस नहीं कर रहा हूँ
+    - मैं निराश हूँ
+    - मेरा मूड खराब है
+    - माझा दिवस खराब गेला
+    - मी दु:खी आहे
+    - मी निराश आहे
+    - माझा मूड खराब आहे
+    - मैं बहुत उदास हूँ
+    - मी खूप खिन्न आहे
+    - आजचा दिवस वाईट होता
+    - मेरी तबियत ठीक नहीं है
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you an AI?
+    - is this a bot I'm talking to?
+    - you're a bot, right?
+    - are you real?
+    - are you a chatbot?
+    - is this conversation automated?
+    - are you a machine?
+    - are you programmed?
+    - are you an algorithm?
+    - are you artificial intelligence?
+    - can you prove you're human?
+    - who built you?
+    - how do I know you're not a bot?
+    - you're not real, are you?
+    - are you a program?
+    - am I chatting with AI?
+    - are you just a script?
+    - you're not a real person, right?
+    - are you a robot?
+    - is this a real conversation?
+    - क्या आप एक बॉट हैं?
+    - क्या आप इंसान हैं?
+    - क्या मैं एक बॉट से बात कर रहा हूँ?
+    - क्या मैं इंसान से बात कर रहा हूँ?
+    - तू रोबोट आहेस का?
+    - तू बॉट आहेस का?
+- intent: ask_vpby_benefits
+  examples: |
+    - What are the benefits of VPBY?
+    - Tell me about the benefits of Varishtha Pension Bima Yojana
+    - What advantages does VPBY offer?
+    - What are the main benefits of VPBY?
+    - List the benefits of Varishtha Pension Bima Yojana
+    - Why should I choose VPBY?
+    - Is VPBY beneficial?
+    - What are the perks of VPBY?
+    - How can VPBY help me?
+    - Why is VPBY a good option?
+    - What does VPBY offer?
+    - Explain the benefits of VPBY
+    - What makes VPBY advantageous?
+    - Is VPBY worth investing in?
+    - What are the key advantages of VPBY?
+    - Can you tell me why VPBY is beneficial?
+    - Why invest in VPBY?
+    - What's good about VPBY?
+    - How does VPBY benefit me?
+    - Are there any special benefits of VPBY?
+    - वीपीबीवाई के क्या लाभ हैं?
+    - वरिष्ठ पेंशन बीमा योजना के लाभों के बारे में बताएं
+    - वीपीबीवाई क्या लाभ प्रदान करता है?
+    - वीपीबीवाई के मुख्य लाभ क्या हैं?
+    - वरिष्ठ पेंशन बीमा योजना के लाभों की सूची बनाएं
+    - मुझे वीपीबीवाई क्यों चुनना चाहिए?
+    - क्या वीपीबीवाई फायदेमंद है?
+    - वीपीबीवाई के लाभ क्या हैं?
+    - वीपीबीवाई मेरी कैसे मदद कर सकता है?
+    - वीपीबीवाई एक अच्छा विकल्प क्यों है?
+    - वीपीबीवाई क्या ऑफर करता है?
+    - VPBY के फायदे क्या हैं?
+    - वरिष्ठ पेंशन बीमा योजना के लाभ क्या हैं?
+    - VPBY चे फायदे काय आहेत?
+    - वरिष्ठ पेंशन विमा योजनेचे फायदे काय आहेत?
+    - VPBY से क्या लाभ हैं?
+    - VPBY से मुझे क्या फायदे मिल सकते हैं?
+    - VPBY का लाभ क्यों लेना चाहिए?
+    - VPBY में निवेश करने के फायदे क्या हैं?
+    - VPBY योजना से क्या लाभ होंगे?
+    - वरिष्ठ पेंशन बीमा योजना के मुख्य लाभ क्या हैं?
+    - VPBY के महत्वपूर्ण फायदे क्या हैं?
+    - VPBY योजना के फायदे बताएं
+    - VPBY योजना में निवेश क्यों करें?
+    - VPBY योजना से क्या फायदे मिलते हैं?
+    - VPBY कसे फायदेशीर आहे?
+    - VPBY कसे फायदेशीर ठरू शकते?
+    - VPBY योजना का फायदा काय आहेत?
+    - वरिष्ठ पेंशन विमा योजना का फायदे काय आहेत?
+    - VPBY योजना का फायदे सांगा
+    - VPBY योजना में गुंतवणूक का फायदे काय आहेत?
+    - VPBY योजना का गुंतवणूक का मुख्य फायदे काय आहेत?
+    - वरिष्ठा पेन्शन विमा योजनेच्या फायद्यांबद्दल मला सांगा
+    - VPBY कोणते फायदे देते?
+    - VPBY चे मुख्य फायदे काय आहेत?
+    - वरिष्ठ पेन्शन विमा योजनेच्या लाभांची यादी करा
+    - मी VPBY का निवडावे?
+    - VPBY फायदेशीर आहे का?
+    - VPBY मला कशी मदत करू शकेल?
+    - VPBY हा एक चांगला पर्याय का आहे?
+    - VPBY काय ऑफर करते?
+- intent: ask_vpby_how_it_works
+  examples: |
+    - How does VPBY work?
+    - Explain how Varishtha Pension Bima Yojana works
+    - What is the working process of VPBY?
+    - Can you explain how VPBY operates?
+    - What is the procedure of VPBY?
+    - How do I participate in VPBY?
+    - Describe the working mechanism of VPBY
+    - How does one enroll in VPBY?
+    - What are the steps to join VPBY?
+    - How is VPBY structured?
+    - What's the process of VPBY?
+    - How do I get started with VPBY?
+    - Explain the VPBY process
+    - How can I apply for VPBY?
+    - What's involved in VPBY?
+    - How does the VPBY plan function?
+    - What is needed to start with VPBY?
+    - How does the pension scheme of VPBY work?
+    - वीपीबीवाई कैसे काम करता है?
+    - बताएं कि वरिष्ठ पेंशन बीमा योजना कैसे काम करती है
+    - VPBY की कार्य प्रक्रिया क्या है?
+    - क्या आप बता सकते हैं कि VPBY कैसे संचालित होता है?
+    - VPBY की प्रक्रिया क्या है?
+    - मैं वीपीबीवाई में कैसे भाग ले सकता हूं?
+    - वीपीबीवाई की कार्य प्रणाली का वर्णन करें
+    - वीपीबीवाई में कोई कैसे नामांकन कर सकता है?
+    - वीपीबीवाई में शामिल होने के लिए क्या कदम हैं?
+    - वीपीबीवाई कैसे संरचित है?
+    - VPBY कैसे काम करता है?
+    - वरिष्ठ पेंशन बीमा योजना कैसे काम करती है?
+    - VPBY योजना की प्रक्रिया क्या है?
+    - VPBY कैसे संचालित होता है?
+    - VPBY में भाग लेने की प्रक्रिया क्या है?
+    - VPBY योजना का कार्यप्रणाली समझाएं
+    - VPBY मध्ये कसे सहभागी व्हावे?
+    - वरिष्ठ पेंशन विमा योजना कशी काम करते?
+    - VPBY योजना का प्रक्रिया काय आहे?
+    - VPBY योजना में सामील होने के कदम क्या हैं?
+    - VPBY योजना में सहभाग कसा घ्यायचा?
+    - VPBY योजना कसे काम करते?
+    - VPBY कसे कार्य करते?
+    - VPBY योजना की प्रक्रिया काय आहे?
+    - VPBY योजना का कार्यप्रणाली काय आहे?
+    - VPBY योजना का कामगिरी काय आहे?
+    - VBpy कैसे काम करता है
+    - वरिष्ठा पेन्शन विमा योजना कशी कार्य करते ते स्पष्ट करा
+    - VPBY ची कार्यप्रक्रिया काय आहे?
+    - VPBY कसे चालते ते तुम्ही स्पष्ट करू शकता?
+    - VPBY ची प्रक्रिया काय आहे?
+    - मी VPBY मध्ये कसा भाग घेऊ?
+    - VPBY च्या कार्यप्रणालीचे वर्णन करा
+    - VPBY मध्ये नोंदणी कशी होते?
+    - VPBY मध्ये सामील होण्यासाठी कोणत्या पायऱ्या आहेत?
+    - VPBY ची रचना कशी आहे?
+- intent: ask_vpby_pension_amount
+  examples: |
+    - What is the minimum pension amount under VPBY?
+    - What is the maximum pension amount under Varishtha Pension Bima Yojana?
+    - How much pension can I get from VPBY?
+    - What's the pension amount in VPBY?
+    - How is the pension amount decided in VPBY?
+    - What's the range of pension in VPBY?
+    - How much can I earn as pension from VPBY?
+    - What's the highest pension in VPBY?
+    - What's the lowest pension in VPBY?
+    - How is pension calculated in VPBY?
+    - What's the monthly pension in VPBY?
+    - How does VPBY determine pension amounts?
+    - What's the pension limit in VPBY?
+    - How much pension can I expect from VPBY?
+    - What are the pension options in VPBY?
+    - How is the pension amount determined in VPBY?
+    - What's the maximum pension from VPBY?
+    - What's the minimum pension from VPBY?
+    - VPBY में न्यूनतम पेंशन राशि क्या है?
+    - VPBY के अंतर्गत न्यूनतम पेंशन राशि क्या है?
+    - वरिष्ठ पेंशन बीमा योजना के अंतर्गत अधिकतम पेंशन राशि क्या है?
+    - VPBY से मुझे कितनी पेंशन मिल सकती है?
+    - VPBY में पेंशन राशि क्या है?
+    - VPBY में पेंशन राशि कैसे तय की जाती है?
+    - VPBY में पेंशन की सीमा क्या है?
+    - मैं वीपीबीवाई से पेंशन के रूप में कितना कमा सकता हूं?
+    - VPBY में सबसे अधिक पेंशन क्या है?
+    - वीपीबीवाई में सबसे कम पेंशन क्या है?
+    - VPBY में पेंशन की गणना कैसे की जाती है?
+    - वीपीबीवाई में मासिक पेंशन क्या है?
+    - वरिष्ठ पेंशन बीमा योजना में अधिकतम पेंशन राशि क्या है?
+    - VPBY मध्ये किमान पेन्शन रक्कम किती आहे?
+    - वरिष्ठ पेंशन विमा योजनेत कमाल पेन्शन रक्कम किती आहे?
+    - VPBY में पेंशन की राशि कितनी है?
+    - VPBY योजना का पेंशन किती आहे?
+    - VPBY योजना मध्ये पेन्शन कसे निश्चित होते?
+    - VPBY योजना का पेन्शन किती असते?
+    - VPBY योजना का मासिक पेन्शन किती आहे?
+    - VPBY योजना का किमान पेन्शन किती आहे?
+    - VPBY योजना का कमाल पेन्शन किती आहे?
+    - VPBY योजना का पेन्शन रक्कम कसे निश्चित होते?
+    - VPBY योजना का मासिक पेन्शन कसे असते?
+    - VPBY अंतर्गत किमान पेन्शन रक्कम किती आहे?
+    - वरिष्ठा पेन्शन विमा योजनेअंतर्गत जास्तीत जास्त पेन्शनची रक्कम किती आहे?
+    - VPBY कडून मला किती पेन्शन मिळू शकते?
+    - VPBY मध्ये पेन्शनची रक्कम किती आहे?
+    - VPBY मध्ये पेन्शनची रक्कम कशी ठरवली जाते?
+    - VPBY मध्ये पेन्शनची श्रेणी किती आहे?
+    - मी VPBY मधून पेन्शन म्हणून किती कमवू शकतो?
+    - VPBY मध्ये सर्वात जास्त पेन्शन किती आहे?
+    - VPBY मध्ये सर्वात कमी पेन्शन किती आहे?
+    - VPBY मध्ये पेन्शनची गणना कशी केली जाते?
+    - VPBY मध्ये मासिक पेन्शन किती आहे?
+- intent: ask_vpby_tax_benefits
+  examples: |
+    - What are the tax benefits of VPBY?
+    - Does Varishtha Pension Bima Yojana offer tax benefits?
+    - Can I get tax deductions for investing in VPBY?
+    - What tax deductions are available in VPBY?
+    - Can VPBY help me save on taxes?
+    - What are the tax advantages of VPBY?
+    - Does VPBY offer tax savings?
+    - Are there any tax benefits in VPBY?
+    - How does VPBY affect my taxes?
+    - Can I get tax relief with VPBY?
+    - What are the tax perks of VPBY?
+    - Is VPBY tax-exempt?
+    - What's the tax status of VPBY?
+    - Does VPBY offer tax deductions?
+    - How does investing in VPBY impact taxes?
+    - Are there any tax incentives in VPBY?
+    - What are the tax benefits related to VPBY?
+    - How does VPBY help in tax planning?
+    - Can VPBY investments be tax-deductible?
+    - Does VPBY provide any tax breaks?
+    - VPBY के कर लाभ क्या हैं?
+    - वरिष्ठ पेंशन बीमा योजना के कर लाभ क्या हैं?
+    - VPBY चे कर फायदे काय आहेत?
+    - वीपीबीवाई के कर लाभ क्या हैं?
+    - क्या वरिष्ठ पेंशन बीमा योजना कर लाभ प्रदान करती है?
+    - क्या मुझे वीपीबीवाई में निवेश पर कर कटौती मिल सकती है?
+    - वीपीबीवाई में कौन सी कर कटौती उपलब्ध हैं?
+    - क्या वीपीबीवाई मुझे कर बचाने में मदद कर सकता है?
+    - क्या वीपीबीवाई कर बचत की पेशकश करता है?
+    - क्या वीपीबीवाई में कोई कर लाभ है?
+    - वीपीबीवाई मेरे करों को कैसे प्रभावित करता है?
+    - क्या मुझे वीपीबीवाई से कर राहत मिल सकती है?
+    - क्या वीपीबीवाई कर-मुक्त है
+    - वरिष्ठ पेंशन विमा योजनेचे कर लाभ काय आहेत?
+    - VPBY योजना का कर लाभ काय आहेत?
+    - VPBY योजना में कर बचत कसे होऊ शकते?
+    - VPBY योजना का कर लाभ कसे मिळू शकतात?
+    - VPBY योजना में कर योजना कसे मदद करते?
+    - VPBY योजना का कर लाभ सांगा
+    - VPBY योजना का कर फायदा काय आहेत?
+    - VPBY योजना का करदायत्व कसे असते?
+    - VPBY योजना का कर सूट काय आहेत?
+    - VPBY योजना का कर व्यतिरिक्त फायदे काय आहेत?
+    - VPBY योजना का गुंतवणूक कसे कर सूट मिळू शकते?
+    - VPBY योजना का गुंतवणूक कसे कर योजने में मदद होऊ शकते?
+    - वरिष्ठा पेन्शन विमा योजना कर लाभ देते का?
+    - VPBY मध्ये गुंतवणुकीसाठी मला कर वजावट मिळू शकते का?
+    - VPBY मध्ये कोणती कर कपात उपलब्ध आहे?
+    - VPBY मला कर वाचविण्यात मदत करू शकेल का?
+    - VPBY कर बचत देते का?
+    - VPBY मध्ये काही कर लाभ आहेत का?
+    - VPBY माझ्या करांवर कसा परिणाम करते?
+    - मला VPBY सह कर सवलत मिळेल का?
+    - VPBY चे कर लाभ काय आहेत?
+    - VPBY करमुक्त आहे का?
+- intent: ask_ppf_benefits
+  examples: |
+    - What are the benefits of PPF?
+    - Tell me about the benefits of Public Provident Fund
+    - What advantages does PPF offer?
+    - What are the main benefits of PPF?
+    - List the benefits of Public Provident Fund
+    - Why should I choose PPF?
+    - Is PPF beneficial?
+    - What are the perks of PPF?
+    - How can PPF help me?
+    - Why is PPF a good option?
+    - What does PPF offer?
+    - Explain the benefits of PPF
+    - What makes PPF advantageous?
+    - Is PPF worth investing in?
+    - What are the key advantages of PPF?
+    - Can you tell me why PPF is beneficial?
+    - Why invest in PPF?
+    - What's good about PPF?
+    - How does PPF benefit me?
+    - Are there any special benefits of PPF?
+    - PPF के फायदे क्या हैं?
+    - पीपीएफ के क्या फायदे हैं?
+    - मुझे पब्लिक प्रोविडेंट फंड के फायदों के बारे में बताएं
+    - पीपीएफ क्या लाभ प्रदान करता है?
+    - पीपीएफ के मुख्य लाभ क्या हैं?
+    - सार्वजनिक भविष्य निधि के लाभों की सूची बनाएं
+    - मुझे पीपीएफ क्यों चुनना चाहिए?
+    - क्या पीपीएफ फायदेमंद है?
+    - पीपीएफ के लाभ क्या हैं?
+    - पीपीएफ मेरी कैसे मदद कर सकता है?
+    - पीपीएफ एक अच्छा विकल्प क्यों है?
+    - पीपीएफ क्या ऑफर करता है?
+    - पीपीएफ के फायदे बताएं
+    - सार्वजनिक भविष्य निधि के लाभ क्या हैं?
+    - PPF चे फायदे काय आहेत?
+    - सार्वजनिक भविष्य निर्वाह निधीचे फायदे काय आहेत?
+    - PPF योजना का फायदे काय आहेत?
+    - PPF योजना में कसे फायदे होऊ शकतात?
+    - PPF योजना का गुंतवणूक का फायदे काय आहेत?
+    - PPF योजना का महत्वपूर्ण फायदे काय आहेत?
+    - PPF योजना का फायद्यासाठी कसे फायदेशीर आहे?
+    - PPF योजना का प्रमुख फायदे काय आहेत?
+    - PPF योजना का कसे उपयोगी आहे?
+    - PPF योजना का उपयोगिता काय आहेत?
+    - PPF योजना का फायदेशीरता काय आहेत?
+    - PPF योजना का गुंतवणूक का कारणे काय आहेत?
+    - PPF योजना का फायद्यासाठी कोणते लाभ आहेत?
+    - पीपीएफचे काय फायदे आहेत?
+    - मला सार्वजनिक भविष्य निर्वाह निधीच्या फायद्यांबद्दल सांगा
+    - पीपीएफ कोणते फायदे देते?
+    - पीपीएफचे मुख्य फायदे काय आहेत?
+    - सार्वजनिक भविष्य निर्वाह निधीच्या फायद्यांची यादी करा
+    - मी PPF का निवडावे?
+    - पीपीएफ फायदेशीर आहे का?
+    - पीपीएफचे फायदे काय आहेत?
+    - पीपीएफ मला कशी मदत करू शकेल?
+    - पीपीएफ हा चांगला पर्याय का आहे?
+    - पीपीएफ काय ऑफर करते?
+    - पीपीएफचे फायदे सांगा
+    - pdf kei fayde
+- intent: ask_ppf_min_investment
+  examples: |
+    - What is the minimum investment amount in PPF?
+    - How much do I need to invest in PPF at minimum?
+    - What is the least amount I can invest in Public Provident Fund?
+    - What's the minimum contribution to PPF?
+    - How little can I invest in PPF?
+    - What's the smallest investment in PPF?
+    - How much do I need to start a PPF account?
+    - What's the entry investment for PPF?
+    - What's the initial investment required for PPF?
+    - How low can my investment be in PPF?
+    - What's the minimum deposit for PPF?
+    - What's the minimum annual investment in PPF?
+    - How much money do I need to invest in PPF initially?
+    - What's the smallest deposit I can make in PPF?
+    - How much should I invest in PPF at least?
+    - What is the least amount I need for PPF?
+    - How much to start investing in PPF?
+    - What's the smallest amount for PPF?
+    - How little can I contribute to PPF?
+    - What's the lowest investment for PPF?
+    - पीपीएफ में न्यूनतम निवेश राशि क्या है?
+    - मुझे पीपीएफ में न्यूनतम कितना निवेश करना होगा?
+    - सार्वजनिक भविष्य निधि में मैं न्यूनतम कितनी राशि निवेश कर सकता हूँ?
+    - पीपीएफ में न्यूनतम योगदान कितना है?
+    - मैं पीपीएफ में कितना कम निवेश कर सकता हूं?
+    - पीपीएफ में सबसे छोटा निवेश क्या है?
+    - पीपीएफ खाता शुरू करने के लिए मुझे कितना पैसा चाहिए?
+    - पीपीएफ के लिए प्रवेश निवेश क्या है?
+    - पीपीएफ के लिए प्रारंभिक निवेश कितना आवश्यक है?
+    - पीपीएफ में मेरा निवेश कितना कम हो सकता है?
+    - पीपीएफ के लिए न्यूनतम जमा राशि क्या है?
+    - पीपीएफ में न्यूनतम वार्षिक निवेश क्या है?
+    - PPF में न्यूनतम निवेश राशि क्या है?
+    - PPF में न्यूनतम योगदान कितना है?
+    - सार्वजनिक भविष्य निधि में कम से कम कितना निवेश कर सकते हैं?
+    - PPF मध्ये किमान गुंतवणूक रक्कम किती आहे?
+    - PPF मध्ये किमान योगदान किती आहे?
+    - सार्वजनिक भविष्य निर्वाह निधीमध्ये कमीत कमी किती गुंतवणूक करू शकतो?
+    - PPF में कम से कम कितनी राशि निवेश कर सकते हैं?
+    - PPF मध्ये कमीत कमी किती गुंतवणूक करता येईल?
+    - PPF योजना का किमान गुंतवणूक रक्कम किती आहे?
+    - PPF योजना का प्रारंभिक गुंतवणूक किती आहे?
+    - PPF योजना का प्रारंभिक गुंतवणूक रक्कम किती आहे?
+    - PPF योजना का प्रारंभिक योगदान किती आहे?
+    - PPF योजना का प्रारंभिक जमा किती आहे?
+    - PPF योजना का प्रारंभिक निवेश किती आहे?
+    - PPF योजना का किमान जमा किती आहे?
+    - PPF योजना का किमान वार्षिक गुंतवणूक किती आहे?
+    - PPF योजना का प्रारंभिक योगदान किती रक्कम आहे?
+    - PPF योजना का किमान गुंतवणूक किती आहे?
+    - PPF मध्ये मला किमान किती गुंतवणूक करावी लागेल?
+    - मी पब्लिक प्रॉव्हिडंट फंडमध्ये किमान किती रक्कम गुंतवू शकतो?
+    - मी पीपीएफमध्ये किती कमी गुंतवणूक करू शकतो?
+    - PPF मध्ये सर्वात लहान गुंतवणूक कोणती आहे?
+    - पीपीएफ खाते सुरू करण्यासाठी मला किती पैसे लागतील?
+    - पीपीएफसाठी प्रवेश गुंतवणूक काय आहे?
+    - PPF साठी प्रारंभिक गुंतवणूक किती आवश्यक आहे?
+    - पीपीएफमध्ये माझी गुंतवणूक किती कमी असू शकते?
+    - PPF साठी किमान ठेव किती आहे?
+    - PPF मध्ये किमान वार्षिक गुंतवणूक किती आहे?
+- intent: ask_ppf_max_investment
+  examples: |
+    - What is the maximum investment amount in PPF?
+    - How much can I invest in PPF at maximum?
+    - What is the highest amount I can invest in Public Provident Fund?
+    - What's the maximum contribution to PPF?
+    - How much can I invest in PPF at most?
+    - What's the largest investment in PPF?
+    - How much can I put into a PPF account?
+    - What's the highest investment for PPF?
+    - What's the maximum deposit for PPF?
+    - What's the maximum annual investment in PPF?
+    - How much money can I invest in PPF?
+    - What's the biggest deposit I can make in PPF?
+    - How much should I invest in PPF at most?
+    - What is the highest amount I need for PPF?
+    - What's the biggest amount for PPF?
+    - How much can I contribute to PPF?
+    - What's the highest investment allowed in PPF?
+    - What's the maximum investment limit for PPF?
+    - How much can I invest in PPF every year?
+    - What's the highest annual investment in PPF?
+    - पीपीएफ के लिए अधिकतम जमा राशि क्या है?
+    - पीपीएफ में अधिकतम वार्षिक निवेश कितना है?
+    - मैं पीपीएफ में कितना पैसा निवेश कर सकता हूं?
+    - पीपीएफ में मैं कितनी बड़ी जमा राशि जमा कर सकता हूं?
+    - मुझे पीपीएफ में अधिकतम कितना निवेश करना चाहिए?
+    - पीपीएफ के लिए मुझे अधिकतम कितनी राशि की आवश्यकता है?
+    - पीपीएफ के लिए सबसे बड़ी रकम क्या है?
+    - मैं पीपीएफ में कितना योगदान कर सकता हूं?
+    - पीपीएफ में अधिकतम कितना निवेश अनुमत है?
+    - पीपीएफ के लिए अधिकतम निवेश सीमा क्या है?
+    - मैं पीपीएफ में हर साल कितना निवेश कर सकता हूं?
+    - PPF में अधिकतम निवेश राशि क्या है?
+    - PPF में अधिकतम योगदान कितना है?
+    - सार्वजनिक भविष्य निधि में अधिक से अधिक कितना निवेश कर सकते हैं?
+    - PPF मध्ये कमाल गुंतवणूक रक्कम किती आहे?
+    - PPF मध्ये कमाल योगदान किती आहे?
+    - सार्वजनिक भविष्य निर्वाह निधीमध्ये कमाल किती गुंतवणूक करू शकतो?
+    - PPF में अधिक से अधिक कितनी राशि निवेश कर सकते हैं?
+    - PPF मध्ये अधिकतम किती गुंतवणूक करता येईल?
+    - PPF योजना का कमाल गुंतवणूक रक्कम किती आहे?
+    - PPF योजना का जास्तीत जास्त गुंतवणूक किती आहे?
+    - PPF योजना का अधिकतम गुंतवणूक रक्कम किती आहे?
+    - PPF योजना का जास्तीत जास्त योगदान किती आहे?
+    - PPF योजना का जास्तीत जास्त जमा किती आहे?
+    - PPF योजना का जास्तीत जास्त वार्षिक गुंतवणूक किती आहे?
+    - PPF योजना का अधिकतम जमा किती आहे?
+    - PPF योजना का अधिकतम गुंतवणूक किती आहे?
+    - PPF योजना का अधिकतम योगदान किती आहे?
+    - PPF योजना का अधिकतम वार्षिक गुंतवणूक किती आहे?
+    - PPF साठी जास्तीत जास्त किती ठेव आहे?
+    - PPF मध्ये जास्तीत जास्त वार्षिक गुंतवणूक किती आहे?
+    - मी पीपीएफमध्ये किती पैसे गुंतवू शकतो?
+    - मी PPF मध्ये सर्वात मोठी ठेव कोणती करू शकतो?
+    - मी पीपीएफमध्ये जास्तीत जास्त किती गुंतवणूक करावी?
+    - PPF साठी मला सर्वात जास्त किती रक्कम हवी आहे?
+    - PPF साठी सर्वात मोठी रक्कम कोणती आहे?
+    - मी PPF मध्ये किती योगदान देऊ शकतो?
+    - PPF मध्ये सर्वाधिक गुंतवणुकीला परवानगी आहे?
+    - PPF साठी गुंतवणुकीची कमाल मर्यादा किती आहे?
+    - मी दरवर्षी पीपीएफमध्ये किती गुंतवणूक करू शकतो?
+- intent: set_slot_language
+  examples: |
+    - Slot set to [en-US](language)
+    - Set language to [hi-IN](language)
+    - Change language to [mr-IN](language)
+    - Switch to [en-US](language)
+    - Update to [hi-IN](language)
+    - Language should be [mr-IN](language)
+    - [hi-IN](language)

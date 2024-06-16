@@ -1,307 +1,300 @@
-version: "3.1"
+version: '3.1'
 intents:
-  - affirm
-  - ask_ppf_benefits
-  - ask_ppf_max_investment
-  - ask_ppf_min_investment
-  - ask_vpby_benefits
-  - ask_vpby_how_it_works
-  - ask_vpby_pension_amount
-  - ask_vpby_tax_benefits
-  - bot_challenge
-  - deny
-  - goodbye
-  - greet
-  - mood_great
-  - mood_unhappy
-
+- affirm
+- ask_ppf_benefits
+- ask_ppf_max_investment
+- ask_ppf_min_investment
+- ask_vpby_benefits
+- ask_vpby_how_it_works
+- ask_vpby_pension_amount
+- ask_vpby_tax_benefits
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- set_slot_language
+entities:
+- language
 slots:
   language:
     type: categorical
+    initial_value: en-US
+    values:
+    - en-US
+    - hi-IN
+    - mr-IN
     mappings:
-      - en-US: en-US
-      - hi-IN: hi-IN
-      - mr-IN: mr-IN
-
+    - type: from_entity
+      entity: language
 responses:
   utter_greet:
-    - text: "Hey! How are you?"
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: "नमस्ते! आपण कसे आहात?"
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: "नमस्ते! आप कैसे हैं?"
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
+  - text: Hey! How are you?
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: नमस्ते! आपण कसे आहात?
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: नमस्ते! आप कैसे हैं?
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
   utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: "आपल्या चेहऱ्यावर हसू आणण्यासाठी काहीतरी इथे आहे:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: "यहां कुछ ऐसा है जो आपको खुश कर देगा:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: 'आपल्या चेहऱ्यावर हसू आणण्यासाठी काहीतरी इथे आहे:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: 'यहां कुछ ऐसा है जो आपको खुश कर देगा:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
   utter_did_that_help:
-    - text: "Did that help you?"
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: "हे आपल्याला मदत केली का?"
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: "क्या इससे आपको मदद मिली?"
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
+  - text: Did that help you?
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: हे आपल्याला मदत केली का?
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: क्या इससे आपको मदद मिली?
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
   utter_happy:
-    - text: "Great, carry on!"
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: "छान, पुढे चला!"
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: "बढ़िया, जारी रखें!"
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
+  - text: Great, carry on!
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: छान, पुढे चला!
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: बढ़िया, जारी रखें!
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
   utter_goodbye:
-    - text: "Bye"
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: "विदा"
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: "अलविदा"
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
+  - text: Bye
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: विदा
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: अलविदा
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
   utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: "मी एक बॉट आहे, रासा द्वारा समर्थित."
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: "मैं एक बॉट हूं, जो रासा द्वारा संचालित है।"
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
+  - text: I am a bot, powered by Rasa.
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: मी एक बॉट आहे, रासा द्वारा समर्थित.
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: मैं एक बॉट हूं, जो रासा द्वारा संचालित है।
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
   utter_ask_vpby_benefits:
-    - text: |
-        The benefits of the Varishtha Pension Bima Yojana (VPBY) are:
-        - Guaranteed return of 9% per annum.
-        - Flexible payout options (monthly, quarterly, semi-annual, and annual).
-        - Loan benefit after 3 years.
-        - Tax benefits under Section 80CCC.
-        - Return of purchase price on death.
-        - Easy to purchase with no medical exams.
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: |
-        वरिष्ठ पेंशन बीमा योजना (वीपीबीवाई) चे फायदे आहेत:
-        - वार्षिक 9% परतावा हमी.
-        - लवचिक पेआउट पर्याय (मासिक, त्रैमासिक, अर्धवार्षिक आणि वार्षिक).
-        - 3 वर्षांनंतर कर्ज फायदा.
-        - कलम 80CCC अंतर्गत कर फायदे.
-        - मृत्यूवर खरेदी किमतीचे परतावा.
-        - वैद्यकीय परीक्षा न घेता खरेदी करणे सोपे.
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: |
-        वरिष्ठ पेंशन बीमा योजना (वीपीबीवाई) के लाभ हैं:
-        - वार्षिक 9% की गारंटीकृत वापसी।
-        - लचीले भुगतान विकल्प (मासिक, त्रैमासिक, अर्धवार्षिक और वार्षिक)।
-        - 3 साल बाद ऋण लाभ।
-        - धारा 80CCC के तहत कर लाभ।
-        - मृत्यु पर खरीद मूल्य की वापसी।
-        - बिना किसी चिकित्सा परीक्षा के खरीदना आसान।
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
+  - text: |
+      The benefits of the Varishtha Pension Bima Yojana (VPBY) are:
+      - Guaranteed return of 9% per annum.
+      - Flexible payout options (monthly, quarterly, semi-annual, and annual).
+      - Loan benefit after 3 years.
+      - Tax benefits under Section 80CCC.
+      - Return of purchase price on death.
+      - Easy to purchase with no medical exams.
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: |
+      वरिष्ठ पेंशन बीमा योजना (वीपीबीवाई) चे फायदे आहेत:
+      - वार्षिक 9% परतावा हमी.
+      - लवचिक पेआउट पर्याय (मासिक, त्रैमासिक, अर्धवार्षिक आणि वार्षिक).
+      - 3 वर्षांनंतर कर्ज फायदा.
+      - कलम 80CCC अंतर्गत कर फायदे.
+      - मृत्यूवर खरेदी किमतीचे परतावा.
+      - वैद्यकीय परीक्षा न घेता खरेदी करणे सोपे.
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: |
+      वरिष्ठ पेंशन बीमा योजना (वीपीबीवाई) के लाभ हैं:
+      - वार्षिक 9% की गारंटीकृत वापसी।
+      - लचीले भुगतान विकल्प (मासिक, त्रैमासिक, अर्धवार्षिक और वार्षिक)।
+      - 3 साल बाद ऋण लाभ।
+      - धारा 80CCC के तहत कर लाभ।
+      - मृत्यु पर खरीद मूल्य की वापसी।
+      - बिना किसी चिकित्सा परीक्षा के खरीदना आसान।
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
   utter_ask_vpby_how_it_works:
-    - text: |
-        Under VPBY, a senior citizen pays a lump sum to LIC, and in return, receives a guaranteed pension for 10 years. The pension amount is fixed and can be paid monthly, quarterly, half-yearly, or yearly.
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: |
-        वीपीबीवाई अंतर्गत, एक वरिष्ठ नागरिक एलआयसी ला एकरकमी रक्कम देते आणि त्याबदल्यात, 10 वर्षांसाठी हमी पेन्शन मिळते. पेन्शन रक्कम निश्चित आहे आणि ती मासिक, त्रैमासिक, अर्धवार्षिक किंवा वार्षिक दिली जाऊ शकते.
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: |
-        वीपीबीवाई के तहत, एक वरिष्ठ नागरिक एलआईसी को एकमुश्त राशि का भुगतान करता है, और बदले में, 10 वर्षों के लिए गारंटीकृत पेंशन प्राप्त करता है। पेंशन राशि निश्चित है और इसे मासिक, त्रैमासिक, अर्धवार्षिक या वार्षिक रूप से भुगतान किया जा सकता है।
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
+  - text: |
+      Under VPBY, a senior citizen pays a lump sum to LIC, and in return, receives a guaranteed pension for 10 years. The pension amount is fixed and can be paid monthly, quarterly, half-yearly, or yearly.
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: |
+      वीपीबीवाई अंतर्गत, एक वरिष्ठ नागरिक एलआयसी ला एकरकमी रक्कम देते आणि त्याबदल्यात, 10 वर्षांसाठी हमी पेन्शन मिळते. पेन्शन रक्कम निश्चित आहे आणि ती मासिक, त्रैमासिक, अर्धवार्षिक किंवा वार्षिक दिली जाऊ शकते.
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: |
+      वीपीबीवाई के तहत, एक वरिष्ठ नागरिक एलआईसी को एकमुश्त राशि का भुगतान करता है, और बदले में, 10 वर्षों के लिए गारंटीकृत पेंशन प्राप्त करता है। पेंशन राशि निश्चित है और इसे मासिक, त्रैमासिक, अर्धवार्षिक या वार्षिक रूप से भुगतान किया जा सकता है।
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
   utter_ask_vpby_pension_amount:
-    - text: |
-        The minimum pension amount under VPBY is Rs. 500 per month, and the maximum is Rs. 5,000 per month.
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: |
-        वीपीबीवाई अंतर्गत किमान पेन्शन रक्कम प्रति महिना रु. 500 आहे, आणि जास्तीत जास्त रु. 5,000 आहे.
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: |
-        वीपीबीवाई के तहत न्यूनतम पेंशन राशि प्रति माह रु. 500 है, और अधिकतम रु. 5,000 है।
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
+  - text: |
+      The minimum pension amount under VPBY is Rs. 500 per month, and the maximum is Rs. 5,000 per month.
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: |
+      वीपीबीवाई अंतर्गत किमान पेन्शन रक्कम प्रति महिना रु. 500 आहे, आणि जास्तीत जास्त रु. 5,000 आहे.
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: |
+      वीपीबीवाई के तहत न्यूनतम पेंशन राशि प्रति माह रु. 500 है, और अधिकतम रु. 5,000 है।
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
   utter_ask_vpby_tax_benefits:
-    - text: |
-        The premium paid towards VPBY is eligible for tax deduction under Section 80C of the Income Tax Act, up to Rs. 1.5 lakh per year. However, the pension received is taxable as per the pensioner’s income tax slab.
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: |
-        आयकर अधिनियमाच्या कलम 80C अंतर्गत, प्रति वर्ष रु. 1.5 लाख पर्यंतच्या कर कपातीसाठी वीपीबीवाई कडे दिलेला प्रीमियम पात्र आहे. तथापि, पेन्शनरच्या उत्पन्न कर स्लॅबनुसार मिळालेली पेन्शन करपात्र आहे.
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: |
-        आयकर अधिनियम की धारा 80C के तहत, प्रति वर्ष रु. 1.5 लाख तक की कर कटौती के लिए वीपीबीवाई की ओर भुगतान किया गया प्रीमियम पात्र है। हालांकि, प्राप्त पेंशन पेंशनधारक के आयकर स्लैब के अनुसार कर योग्य है।
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
+  - text: |
+      The premium paid towards VPBY is eligible for tax deduction under Section 80C of the Income Tax Act, up to Rs. 1.5 lakh per year. However, the pension received is taxable as per the pensioner’s income tax slab.
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: |
+      आयकर अधिनियमाच्या कलम 80C अंतर्गत, प्रति वर्ष रु. 1.5 लाख पर्यंतच्या कर कपातीसाठी वीपीबीवाई कडे दिलेला प्रीमियम पात्र आहे. तथापि, पेन्शनरच्या उत्पन्न कर स्लॅबनुसार मिळालेली पेन्शन करपात्र आहे.
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: |
+      आयकर अधिनियम की धारा 80C के तहत, प्रति वर्ष रु. 1.5 लाख तक की कर कटौती के लिए वीपीबीवाई की ओर भुगतान किया गया प्रीमियम पात्र है। हालांकि, प्राप्त पेंशन पेंशनधारक के आयकर स्लैब के अनुसार कर योग्य है।
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
   utter_ask_ppf_benefits:
-    - text: |
-        The benefits of the Public Provident Fund (PPF) are:
-        - Tax benefits under Section 80C up to ₹1.5 lakh per year.
-        - Guaranteed returns with a current interest rate of 7.1% per annum.
-        - Lock-in period of 15 years with partial withdrawals allowed after 7 years.
-        - Maturity amount includes the sum of invested amount, interest earned, and any bonus.
-      condition:
-        - type: slot
-          name: language
-          value: en-US
-    - text: |
-        सार्वजनिक वित्तीय सहाय्य निधी (पीपीएफ) चे लाभ आहेत:
-        - वार्षिक ₹1.5 लाख पर्यंत की कर लाभ धारा 80C अंतर्गत.
-        - वर्तमान वार्षिक 7.1% च्या ब्याजदराने गारंटीकृत रिटर्न्स.
-        - 15 वर्षांची लॉक-इन अवधी, ज्यानंतर आठ वर्षांच्या नंतर भागीदारी करू देण्यात येते.
-        - परिपूर्ण रक्कम निवेश की, वापराची रक्कम, व अन्य कोणत्याही बोनसची एकूण रक्कम समाविष्ट करणे.
-      condition:
-        - type: slot
-          name: language
-          value: mr-IN
-    - text: |
-        सार्वजनिक ईंधन निधी (पीपीएफ) के लाभ हैं:
-        - वार्षिक ₹1.5 लाख तक कर लाभ धारा 80C के तहत।
-        - वर्तमान 7.1% प्रतिवर्ष की गारंटीकृत लाभ।
-        - 15 वर्षों की लॉक-इन अवधि, जिसके बाद सात वर्षों के बाद आंशिक निकासी अनुमोदित है।
-        - परिपूर्ण रकम में निवेश की गई राशि, ब्याज कमाया और कोई बोनस समाविष्ट है।
-      condition:
-        - type: slot
-          name: language
-          value: hi-IN
-
-utter_ask_ppf_min_investment:
+  - text: |
+      The benefits of the Public Provident Fund (PPF) are:
+      - Tax benefits under Section 80C up to ₹1.5 lakh per year.
+      - Guaranteed returns with a current interest rate of 7.1% per annum.
+      - Lock-in period of 15 years with partial withdrawals allowed after 7 years.
+      - Maturity amount includes the sum of invested amount, interest earned, and any bonus.
+    condition:
+    - type: slot
+      name: language
+      value: en-US
+  - text: |
+      सार्वजनिक वित्तीय सहाय्य निधी (पीपीएफ) चे लाभ आहेत:
+      - वार्षिक ₹1.5 लाख पर्यंत की कर लाभ धारा 80C अंतर्गत.
+      - वर्तमान वार्षिक 7.1% च्या ब्याजदराने गारंटीकृत रिटर्न्स.
+      - 15 वर्षांची लॉक-इन अवधी, ज्यानंतर आठ वर्षांच्या नंतर भागीदारी करू देण्यात येते.
+      - परिपूर्ण रक्कम निवेश की, वापराची रक्कम, व अन्य कोणत्याही बोनसची एकूण रक्कम समाविष्ट करणे.
+    condition:
+    - type: slot
+      name: language
+      value: mr-IN
+  - text: |
+      सार्वजनिक ईंधन निधी (पीपीएफ) के लाभ हैं:
+      - वार्षिक ₹1.5 लाख तक कर लाभ धारा 80C के तहत।
+      - वर्तमान 7.1% प्रतिवर्ष की गारंटीकृत लाभ।
+      - 15 वर्षों की लॉक-इन अवधि, जिसके बाद सात वर्षों के बाद आंशिक निकासी अनुमोदित है।
+      - परिपूर्ण रकम में निवेश की गई राशि, ब्याज कमाया और कोई बोनस समाविष्ट है।
+    condition:
+    - type: slot
+      name: language
+      value: hi-IN
+  utter_ask_ppf_min_investment:
   - text: |
       The minimum investment amount in PPF is ₹500 per year. You can invest in lump sum or in installments.
     condition:
-      - type: slot
-        name: language
-        value: en-US
+    - type: slot
+      name: language
+      value: en-US
   - text: |
       पीपीएफ मध्ये किमान निवेश रक्कम वर्षात ₹500 आहे. आपण एकत्रित निवेश किंवा इंस्टॉलमेंट्स मध्ये निवेश करू शकता.
     condition:
-      - type: slot
-        name: language
-        value: mr-IN
+    - type: slot
+      name: language
+      value: mr-IN
   - text: |
       पीपीएफ में न्यूनतम निवेश राशि वर्ष में ₹500 है। आप एकत्रित निवेश या आंशिक निवेश कर सकते हैं।
     condition:
-      - type: slot
-        name: language
-        value: hi-IN
-
-utter_ask_ppf_max_investment:
+    - type: slot
+      name: language
+      value: hi-IN
+  utter_ask_ppf_max_investment:
   - text: |
       The maximum investment amount in PPF is ₹1.5 lakh per year.
     condition:
-      - type: slot
-        name: language
-        value: en-US
+    - type: slot
+      name: language
+      value: en-US
   - text: |
-      PPF मध्ये अधिकतम निवेश रक्कम वर्षात ₹1.5 लाख आहे.
+      पीपीएफ मध्ये अधिकतम निवेश रक्कम वर्षात ₹1.5 लाख आहे.
     condition:
-      - type: slot
-        name: language
-        value: mr-IN
+    - type: slot
+      name: language
+      value: mr-IN
   - text: |
-      PPF में अधिकतम निवेश राशि वर्ष में ₹1.5 लाख है।
+      पीपीएफ में अधिकतम निवेश राशि वर्ष में ₹1.5 लाख है।
     condition:
-      - type: slot
-        name: language
-        value: hi-IN
-
+    - type: slot
+      name: language
+      value: hi-IN
 actions:
-  - utter_ask_vpby_how_it_works
-  - action_set_plan
+- utter_ask_ppf_benefits
+- utter_ask_vpby_how_it_works
+- action_set_plan
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
