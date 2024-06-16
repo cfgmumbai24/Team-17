@@ -1,4 +1,5 @@
 version: "3.1"
+
 intents:
   - affirm
   - ask_ppf_benefits
@@ -14,14 +15,30 @@ intents:
   - greet
   - mood_great
   - mood_unhappy
+  # Remove or define examples for this intent
+  - set_slot_language
 
+entity:
+  - language
+  
 slots:
   language:
     type: categorical
+    initial_value: en-US
+    values:
+      - en-US
+      - hi-IN
+      - mr-IN
     mappings:
-      - en-US: en-US
-      - hi-IN: hi-IN
-      - mr-IN: mr-IN
+      - type: from_intent
+        intent: set_slot_language
+        value: en-US
+      - type: from_intent
+        intent: set_slot_language
+        value: hi-IN
+      - type: from_intent
+        intent: set_slot_language
+        value: mr-IN
 
 responses:
   utter_greet:
@@ -258,46 +275,45 @@ responses:
         - type: slot
           name: language
           value: hi-IN
+  utter_ask_ppf_min_investment:
+    - text: |
+        The minimum investment amount in PPF is ₹500 per year. You can invest in lump sum or in installments.
+      condition:
+        - type: slot
+          name: language
+          value: en-US
+    - text: |
+        पीपीएफ मध्ये किमान निवेश रक्कम वर्षात ₹500 आहे. आपण एकत्रित निवेश किंवा इंस्टॉलमेंट्स मध्ये निवेश करू शकता.
+      condition:
+        - type: slot
+          name: language
+          value: mr-IN
+    - text: |
+        पीपीएफ में न्यूनतम निवेश राशि वर्ष में ₹500 है। आप एकत्रित निवेश या आंशिक निवेश कर सकते हैं।
+      condition:
+        - type: slot
+          name: language
+          value: hi-IN
 
-utter_ask_ppf_min_investment:
-  - text: |
-      The minimum investment amount in PPF is ₹500 per year. You can invest in lump sum or in installments.
-    condition:
-      - type: slot
-        name: language
-        value: en-US
-  - text: |
-      पीपीएफ मध्ये किमान निवेश रक्कम वर्षात ₹500 आहे. आपण एकत्रित निवेश किंवा इंस्टॉलमेंट्स मध्ये निवेश करू शकता.
-    condition:
-      - type: slot
-        name: language
-        value: mr-IN
-  - text: |
-      पीपीएफ में न्यूनतम निवेश राशि वर्ष में ₹500 है। आप एकत्रित निवेश या आंशिक निवेश कर सकते हैं।
-    condition:
-      - type: slot
-        name: language
-        value: hi-IN
-
-utter_ask_ppf_max_investment:
-  - text: |
-      The maximum investment amount in PPF is ₹1.5 lakh per year.
-    condition:
-      - type: slot
-        name: language
-        value: en-US
-  - text: |
-      PPF मध्ये अधिकतम निवेश रक्कम वर्षात ₹1.5 लाख आहे.
-    condition:
-      - type: slot
-        name: language
-        value: mr-IN
-  - text: |
-      PPF में अधिकतम निवेश राशि वर्ष में ₹1.5 लाख है।
-    condition:
-      - type: slot
-        name: language
-        value: hi-IN
+  utter_ask_ppf_max_investment:
+    - text: |
+        The maximum investment amount in PPF is ₹1.5 lakh per year.
+      condition:
+        - type: slot
+          name: language
+          value: en-US
+    - text: |
+        पीपीएफ मध्ये अधिकतम निवेश रक्कम वर्षात ₹1.5 लाख आहे.
+      condition:
+        - type: slot
+          name: language
+          value: mr-IN
+    - text: |
+        पीपीएफ में अधिकतम निवेश राशि वर्ष में ₹1.5 लाख है।
+      condition:
+        - type: slot
+          name: language
+          value: hi-IN
 
 actions:
   - utter_ask_vpby_how_it_works

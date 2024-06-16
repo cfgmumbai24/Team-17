@@ -652,7 +652,11 @@ nlu:
       - PPF मध्ये सर्वाधिक गुंतवणुकीला परवानगी आहे?
       - PPF साठी गुंतवणुकीची कमाल मर्यादा किती आहे?
       - मी दरवर्षी पीपीएफमध्ये किती गुंतवणूक करू शकतो?
-  - intent: set_slot
-      - slot set to something
-      - english
-      - hindi
+  - intent: set_slot_language
+    examples: |
+        - slot set to something
+        - english
+        - hindi
+        - en-US
+        - hi-IN
+        - mr-IN
